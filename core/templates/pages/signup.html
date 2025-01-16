@@ -1,0 +1,73 @@
+
+{% extends "../index.html" %}
+{% load humanize %}
+{% block title %}
+<title>CheckOut Page | Shop</title>
+{% endblock %}
+
+{% block body %}
+
+{% block hero %}  
+{% endblock %}  
+<main>
+      <!-- Registration Section -->
+      <section class="my-5">
+         <div class="container">
+            <div class="row justify-content-center align-items-center">
+               <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
+                  <img src="../assets/images/svg-graphics/signup-g.svg" alt="Signup Graphic" class="img-fluid" />
+               </div>
+               <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
+                  <div class="mb-5">
+                     <h1 class="h2 fw-bold">Register</h1>
+                     <p>Create your account to get started.</p>
+                  </div>
+                  <!-- Form -->
+                  <form method="POST" action="{% url 'register' %}">
+                     {% csrf_token %}
+                     <div class="row g-3">
+                        <!-- Full Name -->
+                        <div class="col-12">
+                           <label for="full_name" class="form-label">Full Name</label>
+                           <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name" required />
+                        </div>
+                        <!-- Email -->
+                        <div class="col-12">
+                           <label for="email" class="form-label">Email Address</label>
+                           <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="col-12">
+                           <label for="phone_number" class="form-label">Phone Number</label>
+                           <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" />
+                        </div>
+                        <!-- Date of Birth -->
+                        <div class="col-12">
+                           <label for="date_of_birth" class="form-label">Date of Birth</label>
+                           <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" />
+                        </div>
+                        <!-- Country -->
+                        <div class="col-12">
+                           <label for="country" class="form-label">Country</label>
+                           <input type="text" class="form-control" id="country" name="country" placeholder="Country" />
+                        </div>
+                        <!-- Password -->
+                        <div class="col-12">
+                           <label for="password" class="form-label">Password</label>
+                           <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="col-12 d-grid">
+                           <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+  <div id="response-message" style="margin-top: 20px; color: green;"></div>
+
+    
+{% endblock %}

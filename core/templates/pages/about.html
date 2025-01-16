@@ -1,0 +1,86 @@
+{% extends "../index.html" %}
+{% load humanize %}
+{% block title %}
+<title>About Us | Shop</title>
+{% endblock %}
+
+{% block body %}
+
+{% block hero %}  
+{% endblock %}  
+
+      <main>
+    <!-- About Us Section -->
+    <section class="mt-lg-14 mt-8">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-1 col-lg-10 col-12">
+                    <h1>{{ about_us.title }}</h1>
+                    <p>{{ about_us.content | safe}}</p>
+                    {% if about_us.image %}
+                        <img src="{{ about_us.image.url }}" alt="About Us" class="img-fluid rounded">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Figures Section -->
+    <section class="bg-success py-14">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-1 col-lg-10">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="text-white me-8 mb-12">
+                                <h2 class="text-white mb-4">Trusted by retailers. Loved by customers.</h2>
+                                <p>We give everyone access to the food they love and more time to enjoy it together.</p>
+                            </div>
+                        </div>
+                        <div class="row row-cols-2 row-cols-md-4">
+                            {% for figure in about_us.key_figures.all %}
+                                <div class="col mb-4 mb-md-0">
+                                    <h3 class="display-5 fw-bold text-white mb-0">{{ figure.value }}</h3>
+                                    <span class="fs-6 text-white">{{ figure.label }}</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="mt-14">
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-1 col-md-10">
+                    <div class="mb-11">
+                        <h2>Our Leadership</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-14">
+        <div class="team-slider mx-4">
+            {% for leader in about_us.leaders.all %}
+                <div class="item">
+                    <div class="bg-light rounded">
+                        <div class="p-6">
+                            <h5 class="h6 mb-0">{{ leader.name }}</h5>
+                            <small>{{ leader.position }}</small>
+                        </div>
+                        {% if leader.image %}
+                            <img src="{{ leader.image.url }}" alt="{{ leader.name }}" class="img-fluid center" />
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+
+{% endblock %} 

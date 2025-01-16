@@ -1,0 +1,3835 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% load static %}
+  <!-- Basic and Helper page needs -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#323232">
+  <link rel="canonical" href="{% url 'home' %}">
+
+  <!-- Title and description -->
+  <title>iHome Luxury Mall - Electronics Store</title>
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="iHome Luxury Mall - Electronics Store">
+  <meta property="og:description" content="Discover premium electronics and luxury items at iHome Luxury Mall.">
+  <meta property="og:url" content="{% url 'home' %}">
+  <meta property="og:site_name" content="iHome Luxury Mall">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="iHome Luxury Mall - Electronics Store">
+  <meta name="twitter:description" content="Discover premium electronics and luxury items at iHome Luxury Mall.">
+
+
+<!-- CSS -->
+  <link href="{% static 'cdn/shop/t/42/assets/timber.scss5ba7.css' %}?v=11703444802047193701707296870" rel="stylesheet" type="text/css" media="all" />
+<!-- Link all your CSS files below -->
+<link href="{% static 'cdn/shop/t/42/assets/font-awesome.min27f9.css' %}?v=128717514895515665821689877192" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/animateba7a.css' %}?v=63947377797642677441689877126" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/pe-icon-7-stroke.min2644.css' %}?v=169990528458211866281689877223" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/themify-icons3fde.css' %}?v=17828378678609318721689877237" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/nice-selectca37.css' %}?v=119575076361459596791689877219" rel="stylesheet" type="text/css" media="all" />
+
+<link href="{% static 'cdn/shop/t/42/assets/select2.min2233.css' %}?v=72880048490959543641689877230" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/jquery-uib41f.css' %}?v=165191563470469430631689877206" rel="stylesheet" type="text/css" media="all" />
+
+<link href="{% static 'cdn/shop/t/42/assets/jquery.fancybox7c21.css' %}?v=95878193068690839161689877209" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/jquery-ui.min5d26.css' %}?v=15061700610354750121689877206" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/meanmenu.min8f2d.css' %}?v=37610079632542559211689877214" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/owl.carousel.min8b3e.css' %}?v=100847393044616809951689877219" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/bootstrap.min922e.css' %}?v=46578218157161605411689877128" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/vendorc828.css' %}?v=14352816072559547291689877241" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/default35cb.css' %}?v=2241265698709567381689877174" rel="stylesheet" type="text/css" media="all" />
+
+<!-- Fancybox CSS 
+<link href="//drou-electronics-store.myshopify.com/cdn/shop/t/42/assets/jquery.fancybox-1.3.4.css?1280" rel="stylesheet" type="text/css" media="all" />
+--><link href="{% static 'cdn/shop/t/42/assets/preloaderb7a1.css' %}?v=52563816516521072171689877262" rel="stylesheet" type="text/css" media="all" />
+
+
+<!-- Link your style.css and responsive.css files below -->
+<link href="{% static 'cdn/shop/t/42/assets/style3354.css' %}?v=157077711930646063401689877232" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'cdn/shop/t/42/assets/responsive40f9.css' %}?v=158108731428781866261689877229" rel="stylesheet" type="text/css" media="all" />
+<!-- Theme Default CSS -->
+<link href="{% static 'cdn/shop/t/42/assets/theme-defaultbc7c.css' %}?v=140671816325727853361689877261" rel="stylesheet" type="text/css" media="all" />
+<!-- Make your theme CSS calls here -->
+<link href="{% static 'cdn/shop/t/42/assets/theme-custom43c8.css' %}?v=158587430589887757471707296870" rel="stylesheet" type="text/css" media="all" />
+
+<!-- Make your theme RTL CSS calls here -->
+<link href="{% static 'cdn/shop/t/42/assets/theme-responsive0d08.css' %}?v=152096115092076842831689877236" rel="stylesheet" type="text/css" media="all" />
+
+<!-- Make all your dynamic CSS calls here -->
+<link href="{% static 'cdn/shop/t/42/assets/skin-theme5b55.css' %}?v=147830828877273476161689877262" rel="stylesheet" type="text/css" media="all" />
+<!-- Call your theme color CSS here -->
+<link href="{% static 'cdn/shop/t/42/assets/theme-colore3c1.css' %}?v=26111339295374731501689877262" rel="stylesheet" type="text/css" media="all" />
+
+
+
+
+
+
+  <!-- JS --><!-- Your update file include here -->
+<script src="{% static 'cdn/shop/t/42/assets/modernizr-3.5.0.mind885.js' %}?v=129302752053281709951689877217"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery-3.3.1.min1a55.js' %}?v=61395414644828968241689877205"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery-1.12.0.min900c.js' %}?v=142013923756776994621689877204"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery-migrate-1.4.1.min231c.js' %}?v=74754078088640826101689877205"></script>
+<script src="{% static 'cdn/shop/t/42/assets/popper.minf2e5.js' %}?v=33812860995991034911689877226"></script>
+<script src="{% static 'cdn/shop/t/42/assets/bootstrap.minb231.js' %}?v=110096547194796874621689877129"></script>
+<!-- Put all third-party JS files in the vendor.css file and minify the files -->
+<script src="{% static 'cdn/shop/t/42/assets/vendor9f36.js' %}?v=92166710884142748261689877262"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery.countdown.min770d.js' %}?v=183628871504181764921689877207"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery.meanmenu.min0c62.js' %}?v=7518832418798369811689877210"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery.scrollUp0036.js' %}?v=95159205425930492741689877212"></script>
+<script src="{% static 'cdn/shop/t/42/assets/isotope57c4.js' %}?v=101494051327983814841689877204"></script>
+<script src="{% static 'cdn/shop/t/42/assets/images-loaded3d92.js?' %}v=162460762279667844921689877200"></script>
+<script src="{% static 'cdn/shop/t/42/assets/waypoints5c8b.js' %}?v=23642913745980925691689877243"></script>
+<script src="{% static 'cdn/shop/t/42/assets/counterup1f1b.js' %}?v=35644296439944871621689877172"></script>
+<script src="{% static 'cdn/shop/t/42/assets/mouse-parallax3fe1.js' %}?v=68114566760693681881689877218"></script>
+<script src="{% static 'cdn/shop/t/42/assets/svg-inject.min22f1.js' %}?v=14204669404048311511689877232"></script>
+<script src="{% static 'cdn/shop/t/42/assets/vivusb9fb.js' %}?v=97200415080612347641689877242"></script>
+<script src="{% static 'cdn/shop/t/42/assets/wow.minc0db.js' %}?v=115119078963534947431689877244"></script>
+<script src="{% static 'cdn/shop/t/42/assets/scrollup7f3d.js' %}?v=169100335161929331451689877230"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery.nice-select.minc774.js' %}?v=3987749186432463691689877211"></script>
+<script src="{% static 'cdn/shop/t/42/assets/jquery-ui.min6dd5.js' %}?v=144151410727154103311689877207"></script>
+<script src="{% static 'cdn/shop/t/42/assets/owl.carousel.minc7cf.js' %}?v=75813715580695946121689877220"></script>
+<script src="{% static 'cdn/shop/t/42/assets/lazysizes.min5935.js' %}?v=89644803952926230611689877213"></script>
+<script src="{% static 'cdn/shop/t/42/assets/plugins10ca.js' %}?v=8618577496855924921689877225"></script>
+
+
+
+
+<!-- Ajax Cart js -->
+<script src="{% static 'cdn/shopifycloud/shopify/assets/themes_support/option_selection-86cdd286ddf3be7e25d68b9fc5965d7798a3ff6228ff79af67b3f4e41d6a34be.js' %}"></script>
+<script src="{% static 'cdn/shopifycloud/shopify/assets/themes_support/api.jquery-b0af070cfe3f5cf7c92f9e2a5da2665ee07ed2aad63bb408f8d6672f894a5996.js' %}"></script>
+<script src="{% static 'cdn/shop/t/42/assets/cart.api7c80.js' %}?v=101271512167727951531689877130"></script>
+
+<!-- Your main.js file upload this file -->
+<script src="{% static 'cdn/shop/t/42/assets/theme1066.js' %}?v=33829583932494970711689877262"></script>
+
+<script async>
+  window.money_format = "<span class=money>${{amount}} USD</span>"; 
+</script>
+
+
+
+
+
+
+
+
+<!-- "snippets/booster-common.liquid" was not rendered, the associated app was uninstalled -->
+<script src="cdn/shop/t/42/assets/predictive-search5549.js?v=42609991257564171689877227" defer="defer"></script>
+  <script>
+  $('body').on('click', function() {
+    $('#predictive-search').attr('style',$('#predictive-search').attr('style')==='display: block;'?'display: none':'display: none;'); 
+    $('#Search').click(function(){return false;});
+    $('.predictive-search__list-item a').click(function(){return false;});
+  });
+  </script><meta property="og:image" content="https://cdn.shopify.com/s/files/1/1130/3412/files/preview.__large_preview.jpg?v=1699765623" />
+<meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/1130/3412/files/preview.__large_preview.jpg?v=1699765623" />
+<meta property="og:image:width" content="590" />
+<meta property="og:image:height" content="300" />
+<link href="https://monorail-edge.shopifysvc.com/" rel="dns-prefetch">
+
+
+
+
+
+
+</head>
+
+<body id="drou-electronics-store-shopify-2-0-theme" class="template-index" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="preloader_active">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object" id="object_one"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_three"></div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(window).on('load', function() {
+    $('#preloader_active').fadeOut('slow');
+  }); 
+</script> <div class="wrapper">
+
+
+    
+
+    <div id="shopify-section-header-1" class="shopify-section"><header id="section-header-1"  class="header-area header-height-1" data-section="headerSection">
+  
+  <!-- Header Top Start Here -->
+
+<div id="section-header-1" class="header-top header-top-ptb-1 d-none d-lg-block">
+  <div class="custom-container">
+    <div class="row align-items-center">
+      
+      <div class="col-xl-3 col-lg-4">
+        <div class="header-info">
+          <ul>
+            
+            <li>(08)123 456 7890</li>
+            
+            
+            
+            <li><a target="_blank" href="https://www.google.com/maps">Store location</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-xl-6 col-lg-4">
+         
+        <div class="covid-update text-center">
+          <p>
+            
+            Tell a friend about Drou & get 20% off*</p>
+        </div>
+        
+      </div>
+      <div class="col-xl-3 col-lg-4">
+        <div class="header-info header-info-right">
+          <ul>
+            
+              
+
+            
+            
+            	<li><a href="account/login.html">Log In / Sign Up</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  
+  
+  <div  id="myHeader"  class="header-bottom sticky-bar sticky-white-bg">
+<div class="custom-container">
+  <div class="header-wrap header-space-between position-relative">
+    <div class="logo logo-width-1"><a href="index.html" class="theme-logo">
+      <img src="cdn/shop/files/logo_300x300f8b8.png?v=1674276674" alt="Drou - Electronics Store Shopify 2.0 Theme">
+    </a></div>
+    <div class="main-menu main-menu-padding-1 main-menu-lh-1 d-none d-lg-block hover-boder">
+      <div class="header-bottom-navigation">
+        <div class="site-main-nav d-none d-lg-block">
+          <nav class="site-nav center-menu">
+            <ul>
+              <!-- Home Menu -->
+              <li class="menu-item-has-children active">
+                <a href="index.html">Home</a>
+                <ul class="sub-menu">
+                  <li class="drop_item"><a href="index0424.html?preview_theme_id=123830566999">Home Demo One</a></li>
+                </ul>
+              </li>
+              <!-- Electronics Menu -->
+              <li class="menu-item-has-children">
+                <a href="collections/all.html">Electronics</a>
+                <ul class="sub-menu">
+                  <li class="mega_dropdown">
+                    <a class="mega-column-title" href="collections/iphone.html">Smart Phone</a>
+                    <ul class="mega-sub-menu">
+                      <li><a href="products/drosafe-chargers.html">Direct TV</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Blog Menu -->
+              <li class="menu-item-has-children">
+                <a href="blogs/news.html">Blog<span>NEW</span></a>
+                <ul class="sub-menu">
+                  <li class="drop_item"><a href="blogs/news.html">Blog Listing</a></li>
+                </ul>
+              </li>
+              <!-- Pages Menu -->
+              <li class="menu-item-has-children">
+                <a href="pages/about-us.html">Pages</a>
+                <ul class="sub-menu">
+                  <li class="multi_item"><a href="pages/about-us.html">About Page</a></li>
+                </ul>
+              </li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="header-action-right">
+      <div class="header-action cart-box">
+        <div class="header-action-icon">
+          <a class="search-active" href="#"><i class="far fa-search"></i></a>
+        </div>
+        <div class="header-action-icon">
+          <a href="pages/wishlist.html"><i class="far fa-heart"></i></a>
+        </div>
+
+<ul>
+  <li>
+    <!-- Cart icon and total items -->
+    <a href="/cart">
+      <span class="far fa-shopping-bag"></span>
+      <span class="total-pro bigcounter">{{ total_items }}</span>
+    </a>
+
+    <!-- Cart dropdown structure -->
+    <ul class="ht-dropdown cart-box-width">
+      
+      <!-- Empty cart message (hidden initially) -->
+      <li class="cart-empty-title" style="display: none;">
+        <h3>Your cart is currently empty.</h3>
+      </li>
+
+      <!-- Cart items container -->
+      <li id="cart-items-list">
+        {% for item in cart.cartitem_set.all %}
+          <div class="single-cart-box" id="cart-item-{{ item.id }}">
+            <div class="cart-img">
+              <a href="{{ item.product.get_absolute_url }}"><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></a>
+              <span class="pro-quantity">{{ item.quantity }}x</span>
+            </div>
+            <div class="cart-content">
+              <h6><a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a></h6>
+              <span class="cart-price"><span class="money">${{ item.product.new_price }}</span></span>
+            </div>
+            <a class="del-icone" href="javascript:void(0);" onclick="removeFromCart({{ item.id }})"><i class="far fa-times"></i></a>
+          </div>
+        {% endfor %}
+      </li>
+
+      <!-- Cart footer with total cost -->
+      <li class="single-product-cart mini-cart-action mini-cart-footer" style="display: block;">
+        <div class="cart-footer">
+          <ul class="price-content">
+            <li>Total: <span class="shopping-cart__total">${{ total_cost }}</span></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Cart actions -->
+      <li class="single-product-cart mini-cart-action" style="display: block;">
+        <div class="cart-actions text-center">
+          <a class="cart--title" href="/cart">View cart</a>
+          <a class="cart-checkout" href="/checkout">Checkout</a>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>
+
+
+<script>
+   
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {myFunction()};
+  
+  // Get the header
+  var header = document.getElementById("myHeader");
+  
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+  
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  }
+  
+  
+  
+</script>
+
+
+
+<style>
+  .theme-logo img{
+    max-width: 230px;
+  }
+  .header-info li.switcher-currency-trigger a {
+    color: #444 !important;
+  }
+
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+  
+
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+  
+</style>
+
+
+
+
+
+
+
+
+</div>
+    
+
+    
+
+
+    
+    
+    <main >
+      <div id="shopify-section-template--14837291941975__1664105368878f8ec1" class="shopify-section">
+    <div id="section-template--14837291941975__1664105368878f8ec1" data-section="heroSlickSlider2" class="slider-area">
+        <div class="hero-slider-active-2 dot-style-1 dot-style-1-position-1" data-slick='{
+                  "slidesToShow": 1,
+                  "slidesToScroll": 1,
+                  "dots": true,
+                  "autoplaySpeed": 1000,
+                  "autoplay": false                            
+              }'>
+            <div class="single-hero-slider single-animation-wrap slider-height-2 custom-d-flex custom-align-item-center bg-img" style='background-image: url("{% static 'cdn/shop/files/x2be57.jpg' %}?v=1674276678");'>
+                <div class="custom-container">
+                    <div class="row align-items-center slider-animated-1">
+                        <div id="block-1664105367f70298a9-0" class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="hero-slider-content-2">
+                                <h4 style="color:#e52e06" class="animated">SALE UP TO 30% OFF</h4>
+                                <h1 style="color:#333333" class="animated mrg-bottom">Apple Watch Series</h1>
+                                <p style="color:#333333" class="animated">Feature packed at a better value than ever Powerful sensors to monitor your fitness</p>
+                                <div class="btn-style-1">
+                                    <a class="animated btn-1-padding-3" href="#">Shop Now <i class="far fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="single-slider-img single-slider-img-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-hero-slider single-animation-wrap slider-height-2 custom-d-flex custom-align-item-center bg-img" style='background-image: url("{% static 'cdn/shop/files/x1be57.jpg' %}?v=1674276678");'>
+                <div class="custom-container">
+                    <div class="row align-items-center slider-animated-1">
+                        <div id="block-1664105367f70298a9-1" class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="hero-slider-content-2">
+                                <h4 style="color:#e52e06" class="animated">New arrivals collection</h4>
+                                <h1 style="color:#333333" class="animated mrg-bottom">iPhone Accessories</h1>
+                                <p style="color:#333333" class="animated">Snap on a case, wallet, wireless charger battery pack all accessories you’re looking</p>
+                                <div class="btn-style-1">
+                                    <a class="animated btn-1-padding-3" href="#">Shop Now <i class="far fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="single-slider-img single-slider-img-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #block-1664105367f70298a9-0 .btn-style-1 a{
+            background: #e52e06 !important;
+            color: #ffffff !important;
+        }
+        #block-1664105367f70298a9-0 .btn-style-1 a:hover {
+            background: #333333 !important;
+            color: #ffffff !important;
+        }
+        #block-1664105367f70298a9-1 .btn-style-1 a{
+            background: #e52e06 !important;
+            color: #ffffff !important;
+        }
+        #block-1664105367f70298a9-1 .btn-style-1 a:hover {
+            background: #333333 !important;
+            color: #ffffff !important;
+        }
+    </style> 
+
+</div>
+
+<style data-shopify>
+    #section-template--14837291941975__1664105368878f8ec1 {
+        padding-top: 0px !important;
+        padding-bottom: 70px !important;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        #section-template--14837291941975__1664105368878f8ec1 {
+            padding-top: 0px !important;
+            padding-bottom: 70px !important;
+        }
+    }
+    @media (max-width: 767px) {
+        #section-template--14837291941975__1664105368878f8ec1 {
+            padding-top: 0px !important;
+            padding-bottom: 55px !important;
+        }
+    }
+</style>
+
+<style>
+    .dot-style-1 ul li button {
+        background: #e2dada;
+    }
+    .dot-style-1 ul li.slick-active button {
+        background: #e52e06;
+    }
+    .dot-style-1 ul li button:hover {
+        background: #e52e06;
+    }
+</style>
+
+
+
+
+
+<div id="shopify-section-template--14837291941975__1582604241543" class="shopify-section"><div class="categories-area pb-70" data-section="bannercollection" id="section-template--14837291941975__1582604241543">
+  <div class="custom-container">
+    
+    <div class="section-title-1 mb-40">
+      <h2>Trending Categories</h2>
+    </div>
+    
+    <div class="categories-slider-1 wow tmFadeInUp">
+      
+      {% for category in trending_categories %}
+      <div class="product-plr-1">
+              <div class="categories-wrap">
+                <div class="categories-img categories-img-zoom">
+                  <a href="{{ category.get_absolute_url }}">
+                    
+                    <img data-src="{{ category.image.url }}" class="lazyload img-fluid" alt="{{ category.name }}">
+                    
+                  </a>
+                </div>
+                
+                <div class="categories-content text-center">
+                  
+                  <h3><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></h3>
+                </div>
+                
+              </div>
+      </div>
+      {% endfor %}
+</div>
+
+
+
+
+<style data-shopify>#section-template--14837291941975__1582604241543{}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__1582604241543{}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__1582604241543{}
+  }</style>
+
+<style>
+  
+  
+  #section-template--14837291941975__1582604241543 .section-title-1 h2 {
+    color: #333333;
+  }
+  
+  
+  
+  
+  
+  
+  #section-template--14837291941975__1582604241543 .categories-wrap .categories-content h3 a {
+      color: #343434;
+    }
+    #section-template--14837291941975__1582604241543 .categories-wrap .categories-content h3 a:hover{
+      color: #4e97fd;
+    }
+  
+  
+
+  
+  
+  
+  
+  
+  
+</style>
+
+
+</div>
+
+
+
+<div id="shopify-section-template--14837291941975__banner-with-text" class="shopify-section"><div class="banner-area  pb-40" id="section-template--14837291941975__banner-with-text">
+  <div  class="custom-container">
+    <div class="row"><div class="col-12 col-xl-6  col-lg-6  col-md-6">
+        <div class="banner-wrap  wow tmFadeInUp mb-30">
+          <div class="banner-img banner-img-zoom">
+            <a href="products/home-entertainment.html"><img id="bannerImage-22340971561047" class="lazyload " data-src="//drou-electronics-store.myshopify.com/cdn/shop/files/sub-banner-1.jpg?v=1674276677" data-sizes="auto" alt=""  >
+</a>
+</div>
+          <div class="banner-content-1  text-center"><span>Security Smart Camera</span><h2>Just Starting At $850</h2><div class="btn-style-1">
+              <a class="font-size-14 btn-1-padding-2" href="products/home-entertainment.html">Shop Now</a>
+            </div></div></div>
+      </div><div class="col-12 col-xl-6  col-lg-6  col-md-6">
+        <div class="banner-wrap  wow tmFadeInUp mb-30">
+          <div class="banner-img banner-img-zoom"><img id="bannerImage-22340971397207" class="lazyload " data-src="//drou-electronics-store.myshopify.com/cdn/shop/files/sub-banner-2.jpg?v=1674276677" data-sizes="auto" alt=""  >
+
+</div>
+          <div class="banner-content-1  text-center"><span>Entertainment & Games</span><h2>Just Starting at $850 Hurry up!</h2><div class="btn-style-1">
+              <a class="font-size-14 btn-1-padding-2" href="#">Shop Now</a>
+            </div></div></div>
+      </div></div>
+  </div>
+</div>
+
+
+<!--  Top Banner Area End -->
+<style data-shopify>#section-template--14837291941975__banner-with-text{}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__banner-with-text{}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__banner-with-text{}
+  }</style>
+<style>
+  
+  #section-template--14837291941975__banner-with-text .banner-wrap .banner-content-1 span{
+        color: #333333
+      }
+      #section-template--14837291941975__banner-with-text .banner-wrap .banner-content-1 h2 {
+        color: #333333
+      }
+      #section-template--14837291941975__banner-with-text .banner-wrap .banner-content-1 h3{
+        color: #e52e06
+      }
+      #section-template--14837291941975__banner-with-text .banner-wrap .btn-style-1 a{
+       background-color: #e52e06
+      }
+      #section-template--14837291941975__banner-with-text .btn-style-1 a {
+        color: #ffffff
+      }
+      #section-template--14837291941975__banner-with-text .banner-wrap:hover .btn-style-1 a {
+       background-color: #333333
+      }
+      #section-template--14837291941975__banner-with-text .banner-wrap:hover .btn-style-1 a {
+        color: #ffffff
+      }
+  
+  
+  
+
+
+
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 50%;
+    left: 41px;
+    margin-top: -82.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    margin-top: -59.5px;
+}
+
+
+
+    
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    position: relative;
+    text-align: center !important;
+}
+
+
+
+
+    
+
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-bottom: 67px;
+    margin-top: 0;
+    position: relative;
+    text-align: center !important;
+}
+.banner-area.bnr_style___2 .banner-content-1 h3 {
+    margin: 10px 0 12px;
+}
+
+    
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+}
+
+</style> 
+
+
+
+
+
+
+</div>
+
+
+<div id="shopify-section-template--14837291941975__16157124880dfb05a5" class="shopify-section"><div class="product-area" id="section-template--14837291941975__16157124880dfb05a5" data-section="CarouselSlider">
+  <div class=" custom-container ">
+    <div class="section-title-btn-wrap mb-35">
+      
+      <div class="section-title-1">
+        <h2>Latest Products</h2>
+      </div>
+      
+      
+      <div class="btn-style-2">
+        <a href="collections.html">View all products <i class="far fa-long-arrow-right"></i></a>
+      </div>
+      
+    </div>
+    <div class="product-slider-active-1 nav-style-2 nav-style-2-modify-2" data-slick='{                                             
+                  "slidesToShow": 5,
+                  "slidesToScroll": 1,
+                  "arrows": true,
+                  "dots": false,
+                  
+                  "autoplay": false,
+                  "autoplaySpeed": 5000,
+                  "speed": 1000,                                                    
+                  "responsive":[
+                    {"breakpoint": 1199,"settings": {"slidesToShow": 3 }},                                                              
+            		{"breakpoint": 991,"settings": {"slidesToShow": 2 }},                                      
+                    {"breakpoint": 767,"settings": {"slidesToShow": 2 }},                                                              
+                    {"breakpoint": 575,"settings": {"slidesToShow": 1 }} 
+                   ]                                                             
+              }'>
+      
+
+                
+{% for product in latest_products %}
+<div class="product-plr-1">
+  <div class="single-product-wrap" id="{{ product.id }}">
+
+    <div class="product-img-action-wrap mb-20">
+      
+      <div class="product-img product-img-zoom">
+        <a href="{{ product.get_absolute_url }}">
+          <!-- Main image from Product model -->
+          <img class="popup_cart_image default-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+          
+          <!-- Hover image from ProductImage (if available) -->
+          {% with hover_image=product.images.all.0 %}
+            {% if hover_image %}
+              <img class="hover-img" src="{{ hover_image.image.url }}" alt="{{ hover_image.alt_text|default:product.name }}">
+            {% endif %}
+          {% endwith %}
+        </a>
+      </div>
+      
+      <div class="product-action-1">
+        <!-- Sold out / Add to cart button -->
+              <button onclick="" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+
+        
+        <!-- Wishlist button -->
+        <span class="nrb_wlist">
+          <a title="Add to Wishlist" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" data-product-handle="{{ product.slug }}">
+            <span class="add-wishlist"><i class="far fa-heart"></i></span>
+            <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i></span>
+            <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+          </a>
+        </span>
+        
+        <!-- Compare button -->
+        <button class="compare compare_btn" data-pid="{{ product.slug }}" aria-label="Compare"><i class="far fa-signal"></i></button>
+      </div>
+      
+      <!-- Badge for discount -->
+      {% if product.discount %}
+        <div class="product-badges product-badges-position product-badges-mrg xbx">
+          <span class="badge badge-discount">-{{ product.discount }}%</span>
+        </div>
+      {% endif %}
+      
+    </div>
+
+    <div class="product-content-wrap">
+      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+      
+      <h2><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h2>
+      
+      <div class="product-price">
+        <span class="price"><span class="money">${{ product.new_price }}</span></span>
+        
+        {% if product.old_price > product.new_price %}
+          <span class="prev-price"><span class="money">${{ product.old_price }}</span></span>
+        {% endif %}
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+{% endfor %}
+
+
+      
+ 
+
+      
+
+      
+   
+      
+
+      
+      
+    </div>
+  </div>
+</div>
+
+
+    <style>#section-template--14837291941975__16157124880dfb05a5.product-carousel-container .product-carousel .slick-arrow {
+        color: ;
+      }
+    </style>
+    <style data-shopify>#section-template--14837291941975__16157124880dfb05a5{padding-top: 0px !important;
+        padding-bottom: 25px !important;}@media (min-width: 768px) and (max-width: 991px) {
+        #section-template--14837291941975__16157124880dfb05a5{padding-top: 0px !important;
+          padding-bottom: 25px !important;}
+      }
+      @media (max-width: 767px) {
+        #section-template--14837291941975__16157124880dfb05a5{padding-top: 0px !important;
+          padding-bottom: 20px !important;}
+      }
+    </style>
+</div>
+
+
+
+
+
+
+  <div id="shopify-section-template--14837291941975__1664360614eaaccbb5" class="shopify-section"><section class="special-product-area special-product-bg" id="section-template--14837291941975__1664360614eaaccbb5" data-section-id="template--14837291941975__1664360614eaaccbb5">
+  <div  class="custom-container">
+    <div class="row   class_row_rev         ">
+      <div class="col-md-5">
+        
+      </div>
+      
+      <div class="col-md-7">
+        <div class="special-product-countdown">
+         <div class="count_txt">
+            
+            <h5>Hurry Up !</h5>
+            
+            
+            <h4>Up To 25% Discount</h4>
+            
+            
+            <h6>Check it Out</h6>
+            
+          </div>
+          <div class="count_btn">
+            
+            <div class="special-product__countdown">
+              <div class="product-countdown zuka_countdown44" data-countdown="2023/12/30"></div>
+            </div>
+            
+  
+            
+            <a href="collections/all.html" class="makali-button">Shop Now</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><style data-shopify>#section-template--14837291941975__1664360614eaaccbb5{background: #fbfbfb url("cdn/shop/files/main-banner-01be57.jpg?v=1674276678")no-repeat scroll center center / cover;margin-top: 0px !important;
+    margin-bottom: 0px !important;padding-top: 70px !important;
+    padding-bottom: 60px !important;}#section-template--14837291941975__1664360614eaaccbb5.section_overlay::before  {
+    background: ;
+    opacity: ;
+    }@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__1664360614eaaccbb5{margin-top: 0px !important;
+      margin-bottom: 0px !important;padding-top: 70px !important;
+      padding-bottom: 60px !important;}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__1664360614eaaccbb5{margin-top: 0px !important;
+      margin-bottom: 10px !important;padding-top: 35px !important;
+      padding-bottom: 50px !important;}
+  }</style><style data-shopify>
+  
+</style>
+
+<script>
+    $('[data-countdown]').each(function() {
+      var $this = $(this), finalDate = $(this).data('countdown');
+      $this.countdown(finalDate, function(event) {
+        $this.html(event.strftime('<div class="single-countdown"><span class="single-countdown__time">%D</span><span class="single-countdown__text">Days</span></div><div class="single-countdown"><span class="single-countdown__time">%H</span><span class="single-countdown__text">Hrs</span></div><div class="single-countdown"><span class="single-countdown__time">%M</span><span class="single-countdown__text">mins</span></div><div class="single-countdown"><span class="single-countdown__time">%S</span><span class="single-countdown__text">Secs</span></div>'));
+      });
+    });  
+</script></div><div id="shopify-section-template--14837291941975__16643893750bafea73" class="shopify-section"><div class="tab-product-list-area mb-25 mb-md-5 mb-sm-5" id="section-template--14837291941975__16643893750bafea73" data-section="BannerSection">
+  <div class=" custom-container ">
+    <div class="row">
+      <div class="col-lg-12">
+        <!--=======  tab product navigation  =======-->
+        <div class="section-title-btn-wrap mb-35">
+          
+          <div class="section-title-1">
+            <h2>Popular Products</h2>
+          </div>
+          
+          <div class="tab-product-navigation mb-10">
+            <div class="nav nav-tabs" id="nav-tab2" role="tablist">
+<a class="nav-item nav-link  active"  data-toggle="tab" href="#product-tab-1664389375ec521c9f-0-accessories" role="tab" role="tab" aria-selected=" true " >Accessories</a>
+              
+<a class="nav-item nav-link  "  data-toggle="tab" href="#product-tab-1664389375ec521c9f-1-iphone" role="tab" role="tab" aria-selected=" false " >iPhone</a>
+              
+<a class="nav-item nav-link  "  data-toggle="tab" href="#product-tab-1664389375ec521c9f-2-laptop" role="tab" role="tab" aria-selected=" false " >Laptop</a>
+              
+
+              
+
+              
+            </div>
+          </div>
+        </div>
+
+        <!--=======  tab product content  =======-->
+        <div class="tab-content"  id="nav-tabContent2">
+<div class="tab-pane fade show active" id="product-tab-1664389375ec521c9f-0-accessories">
+            <div class="row">
+              
+
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812050519">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/drosafe-chargers.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p10_largeae71.jpg?v=1674275306" alt="DroSafe Charger">        
+        
+        <img class="hover-img " src="cdn/shop/products/p5_020e3c58-9f57-4388-b8d8-bb40db3b4c5e_largeae71.jpg?v=1674275306" alt="DroSafe Charger">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812050519, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="drosafe-chargers">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="drosafe-chargers"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111237207"></span>
+    <h2><a href="products/drosafe-chargers.html">DroSafe Charger</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$55.00</span></span>
+      
+      <span class="prev-price"><span class=money>$75.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092815720535">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/drou-watch-ultra.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/13_large80e1.jpg?v=1674275345" alt="Drou watch ultra">        
+        
+        <img class="hover-img " src="cdn/shop/products/p4_b019dfc8-3740-44ac-8916-6db66a336feb_large80e1.jpg?v=1674275345" alt="Drou watch ultra">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+      <button class="cart-disables"  aria-label="Soldout"><i class="far fa-shopping-bag"></i></button>
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="drou-watch-ultra">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="drou-watch-ultra"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111532119"></span>
+    <h2><a href="products/drou-watch-ultra.html">Drou watch ultra</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$70.00</span></span>
+      
+      <span class="prev-price"><span class=money>$85.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092815229015">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droupods-max.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/12_large0805.jpg?v=1674275341" alt="DrouPods max">        
+        
+        <img class="hover-img " src="cdn/shop/products/p10_78f5d5ed-818a-4a91-88a1-433a7f408c84_large0805.jpg?v=1674275341" alt="DrouPods max">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+      <button class="cart-disables"  aria-label="Soldout"><i class="far fa-shopping-bag"></i></button>
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droupods-max">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droupods-max"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111499351"></span>
+    <h2><a href="products/droupods-max.html">DrouPods max</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$55.00</span></span>
+      
+      <span class="prev-price"><span class=money>$75.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092814934103">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/lphone-14-pro-max.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p8_523c97c7-2aa2-47e8-8b17-5a3c05a66db3_large1d78.jpg?v=1674275335" alt="lPhone 14 pro max">        
+        
+        <img class="hover-img " src="cdn/shop/products/p7_36d931d4-1ef2-4c82-9a65-80426fb77f21_large1d78.jpg?v=1674275335" alt="lPhone 14 pro max">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092814934103, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="lphone-14-pro-max">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="lphone-14-pro-max"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111466583"></span>
+    <h2><a href="products/lphone-14-pro-max.html">lPhone 14 pro max</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$999.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092814180439">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/lphone-13-white-color.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p7_largea8f3.jpg?v=1674275329" alt="lPhone 13 white color">        
+        
+        <img class="hover-img " src="cdn/shop/products/p6_largea8f3.jpg?v=1674275329" alt="lPhone 13 white color">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092814180439, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="lphone-13-white-color">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="lphone-13-white-color"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111433815"></span>
+    <h2><a href="products/lphone-13-white-color.html">lPhone 13 white color</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$110.00</span></span>
+      
+      <span class="prev-price"><span class=money>$130.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812935255">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/11-product-with-video.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p1_large50ab.jpg?v=1674275319" alt="UPad Pro black color">        
+        
+        <img class="hover-img " src="cdn/shop/products/p2_large2c96.jpg?v=1674275320" alt="UPad Pro black color">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812935255, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="11-product-with-video">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="11-product-with-video"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111368279"></span>
+    <h2><a href="products/11-product-with-video.html">UPad Pro black color</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$499.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812542039">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/uphone-lightning-cable.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p5_61c8ce6b-3afa-4276-a285-f98e4d5c7f67_largea7a1.jpg?v=1674275311" alt="Uphone lightning cable">        
+        
+        <img class="hover-img " src="cdn/shop/products/p4_c46c6d30-4b9f-4971-96be-d28d9f0d5ee5_largea7a1.jpg?v=1674275311" alt="Uphone lightning cable">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812542039, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="uphone-lightning-cable">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="uphone-lightning-cable"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111302743"></span>
+    <h2><a href="products/uphone-lightning-cable.html">Uphone lightning cable</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$70.00</span></span>
+      
+      <span class="prev-price"><span class=money>$85.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092811591767">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/homepod-mini-2022.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/11_c6c97b67-edac-48bd-8e5c-cf0de5e9e3cb_largee303.jpg?v=1674275302" alt="Homepod mini 2022">        
+        
+        <img class="hover-img " src="cdn/shop/products/p3_0dd10fdb-44b3-415b-b7c3-91896ecb3ee2_largee303.jpg?v=1674275302" alt="Homepod mini 2022">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092811591767, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="homepod-mini-2022">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="homepod-mini-2022"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111204439"></span>
+    <h2><a href="products/homepod-mini-2022.html">Homepod mini 2022</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$39.00</span></span>
+      
+      <span class="prev-price"><span class=money>$60.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+            </div>
+          </div>
+          
+<div class="tab-pane fade " id="product-tab-1664389375ec521c9f-1-iphone">
+            <div class="row">
+              
+
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092815720535">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/drou-watch-ultra.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/13_large80e1.jpg?v=1674275345" alt="Drou watch ultra">        
+        
+        <img class="hover-img " src="cdn/shop/products/p4_b019dfc8-3740-44ac-8916-6db66a336feb_large80e1.jpg?v=1674275345" alt="Drou watch ultra">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+      <button class="cart-disables"  aria-label="Soldout"><i class="far fa-shopping-bag"></i></button>
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="drou-watch-ultra">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="drou-watch-ultra"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111532119"></span>
+    <h2><a href="products/drou-watch-ultra.html">Drou watch ultra</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$70.00</span></span>
+      
+      <span class="prev-price"><span class=money>$85.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092813295703">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droubook-air-space-gray.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p2_ea1ad2a2-ba0d-4dd2-b29a-e51fd931583b_largee8ce.jpg?v=1674275324" alt="Droubook space gray">        
+        
+        <img class="hover-img " src="cdn/shop/products/p1_c084b79e-4c5b-4790-a7fe-00b1eb18b040_largee8ce.jpg?v=1674275324" alt="Droubook space gray">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092813295703, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droubook-air-space-gray">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droubook-air-space-gray"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111401047"></span>
+    <h2><a href="products/droubook-air-space-gray.html">Droubook space gray</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$80.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092811591767">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/homepod-mini-2022.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/11_c6c97b67-edac-48bd-8e5c-cf0de5e9e3cb_largee303.jpg?v=1674275302" alt="Homepod mini 2022">        
+        
+        <img class="hover-img " src="cdn/shop/products/p3_0dd10fdb-44b3-415b-b7c3-91896ecb3ee2_largee303.jpg?v=1674275302" alt="Homepod mini 2022">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092811591767, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="homepod-mini-2022">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="homepod-mini-2022"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111204439"></span>
+    <h2><a href="products/homepod-mini-2022.html">Homepod mini 2022</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$39.00</span></span>
+      
+      <span class="prev-price"><span class=money>$60.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812050519">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/drosafe-chargers.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p10_largeae71.jpg?v=1674275306" alt="DroSafe Charger">        
+        
+        <img class="hover-img " src="cdn/shop/products/p5_020e3c58-9f57-4388-b8d8-bb40db3b4c5e_largeae71.jpg?v=1674275306" alt="DroSafe Charger">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812050519, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="drosafe-chargers">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="drosafe-chargers"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111237207"></span>
+    <h2><a href="products/drosafe-chargers.html">DroSafe Charger</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$55.00</span></span>
+      
+      <span class="prev-price"><span class=money>$75.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092811362391">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/home-entertainment.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p9_large1b8a.jpg?v=1674275297" alt="Home entertainment">        
+        
+        <img class="hover-img " src="cdn/shop/products/p7_6fe3391a-c2d0-4342-bd4c-70b486ce88ae_large1b8a.jpg?v=1674275297" alt="Home entertainment">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092811362391, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="home-entertainment">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="home-entertainment"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111171671"></span>
+    <h2><a href="products/home-entertainment.html">Home entertainment</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$79.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812935255">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/11-product-with-video.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p1_large50ab.jpg?v=1674275319" alt="UPad Pro black color">        
+        
+        <img class="hover-img " src="cdn/shop/products/p2_large2c96.jpg?v=1674275320" alt="UPad Pro black color">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812935255, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="11-product-with-video">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="11-product-with-video"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111368279"></span>
+    <h2><a href="products/11-product-with-video.html">UPad Pro black color</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$499.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812705879">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droupods-pro-white.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p4_largeaef4.jpg?v=1674275315" alt="DrouPods Pro white">        
+        
+        <img class="hover-img " src="cdn/shop/products/p5_largeaef4.jpg?v=1674275315" alt="DrouPods Pro white">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812705879, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droupods-pro-white">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droupods-pro-white"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111335511"></span>
+    <h2><a href="products/droupods-pro-white.html">DrouPods Pro white</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$39.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812542039">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/uphone-lightning-cable.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p5_61c8ce6b-3afa-4276-a285-f98e4d5c7f67_largea7a1.jpg?v=1674275311" alt="Uphone lightning cable">        
+        
+        <img class="hover-img " src="cdn/shop/products/p4_c46c6d30-4b9f-4971-96be-d28d9f0d5ee5_largea7a1.jpg?v=1674275311" alt="Uphone lightning cable">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812542039, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="uphone-lightning-cable">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="uphone-lightning-cable"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111302743"></span>
+    <h2><a href="products/uphone-lightning-cable.html">Uphone lightning cable</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$70.00</span></span>
+      
+      <span class="prev-price"><span class=money>$85.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+            </div>
+          </div>
+          
+<div class="tab-pane fade " id="product-tab-1664389375ec521c9f-2-laptop">
+            <div class="row">
+              
+
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092815720535">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/drou-watch-ultra.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/13_large80e1.jpg?v=1674275345" alt="Drou watch ultra">        
+        
+        <img class="hover-img " src="cdn/shop/products/p4_b019dfc8-3740-44ac-8916-6db66a336feb_large80e1.jpg?v=1674275345" alt="Drou watch ultra">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+      <button class="cart-disables"  aria-label="Soldout"><i class="far fa-shopping-bag"></i></button>
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="drou-watch-ultra">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="drou-watch-ultra"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111532119"></span>
+    <h2><a href="products/drou-watch-ultra.html">Drou watch ultra</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$70.00</span></span>
+      
+      <span class="prev-price"><span class=money>$85.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092815229015">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droupods-max.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/12_large0805.jpg?v=1674275341" alt="DrouPods max">        
+        
+        <img class="hover-img " src="cdn/shop/products/p10_78f5d5ed-818a-4a91-88a1-433a7f408c84_large0805.jpg?v=1674275341" alt="DrouPods max">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+      <button class="cart-disables"  aria-label="Soldout"><i class="far fa-shopping-bag"></i></button>
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droupods-max">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droupods-max"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111499351"></span>
+    <h2><a href="products/droupods-max.html">DrouPods max</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$55.00</span></span>
+      
+      <span class="prev-price"><span class=money>$75.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092814934103">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/lphone-14-pro-max.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p8_523c97c7-2aa2-47e8-8b17-5a3c05a66db3_large1d78.jpg?v=1674275335" alt="lPhone 14 pro max">        
+        
+        <img class="hover-img " src="cdn/shop/products/p7_36d931d4-1ef2-4c82-9a65-80426fb77f21_large1d78.jpg?v=1674275335" alt="lPhone 14 pro max">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092814934103, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="lphone-14-pro-max">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="lphone-14-pro-max"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111466583"></span>
+    <h2><a href="products/lphone-14-pro-max.html">lPhone 14 pro max</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$999.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092814180439">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/lphone-13-white-color.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p7_largea8f3.jpg?v=1674275329" alt="lPhone 13 white color">        
+        
+        <img class="hover-img " src="cdn/shop/products/p6_largea8f3.jpg?v=1674275329" alt="lPhone 13 white color">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092814180439, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="lphone-13-white-color">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="lphone-13-white-color"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111433815"></span>
+    <h2><a href="products/lphone-13-white-color.html">lPhone 13 white color</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$110.00</span></span>
+      
+      <span class="prev-price"><span class=money>$130.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092813295703">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droubook-air-space-gray.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p2_ea1ad2a2-ba0d-4dd2-b29a-e51fd931583b_largee8ce.jpg?v=1674275324" alt="Droubook space gray">        
+        
+        <img class="hover-img " src="cdn/shop/products/p1_c084b79e-4c5b-4790-a7fe-00b1eb18b040_largee8ce.jpg?v=1674275324" alt="Droubook space gray">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092813295703, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droubook-air-space-gray">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droubook-air-space-gray"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111401047"></span>
+    <h2><a href="products/droubook-air-space-gray.html">Droubook space gray</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$80.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092812705879">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/droupods-pro-white.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p4_largeaef4.jpg?v=1674275315" alt="DrouPods Pro white">        
+        
+        <img class="hover-img " src="cdn/shop/products/p5_largeaef4.jpg?v=1674275315" alt="DrouPods Pro white">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092812705879, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="droupods-pro-white">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="droupods-pro-white"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111335511"></span>
+    <h2><a href="products/droupods-pro-white.html">DrouPods Pro white</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$39.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092811591767">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/homepod-mini-2022.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/11_c6c97b67-edac-48bd-8e5c-cf0de5e9e3cb_largee303.jpg?v=1674275302" alt="Homepod mini 2022">        
+        
+        <img class="hover-img " src="cdn/shop/products/p3_0dd10fdb-44b3-415b-b7c3-91896ecb3ee2_largee303.jpg?v=1674275302" alt="Homepod mini 2022">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092811591767, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="homepod-mini-2022">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="homepod-mini-2022"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111204439"></span>
+    <h2><a href="products/homepod-mini-2022.html">Homepod mini 2022</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$39.00</span></span>
+      
+      <span class="prev-price"><span class=money>$60.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+              <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45"><div class="single-product-wrap 40092811362391">
+  <div class="product-img-action-wrap mb-20">
+    <div class="product-img product-img-zoom">
+      <a href="products/home-entertainment.html">
+                  
+        <img class="popup_cart_image default-img" src="cdn/shop/products/p9_large1b8a.jpg?v=1674275297" alt="Home entertainment">        
+        
+        <img class="hover-img " src="cdn/shop/products/p7_6fe3391a-c2d0-4342-bd4c-70b486ce88ae_large1b8a.jpg?v=1674275297" alt="Home entertainment">
+                  
+           
+      </a>
+    </div>
+
+    <div class="product-action-1">
+       
+      <button onclick="Shopify.addItem(40092811362391, 1); return false;" aria-label="Add To Cart"><i class="far fa-shopping-bag"></i></button>
+      
+      
+<span class="nrb_wlist">
+        <a  title="" aria-label="Add To Wishlist" class="action-wishlist wishlist-btn wishlist" href="javascript: void(0)" button-wishlist data-product-handle="home-entertainment">
+  <span class="add-wishlist"><i class="far fa-heart"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-spinner animated rotateIn infinite"></i> </span>
+  <span class="remove-wishlist"><i class="fas fa-heart"></i></span>
+</a>
+      </span><button class="compare compare_btn" data-pid="home-entertainment"  aria-label="Compare"><i class="far fa-signal"></i></button></div>
+    <div class="product-badges product-badges-position product-badges-mrg xbx"></div>
+  </div>
+  
+  <div class="product-content-wrap"><span class="shopify-product-reviews-badge" data-id="6852111171671"></span>
+    <h2><a href="products/home-entertainment.html">Home entertainment</a></h2>
+    <div class="product-price">
+      <span class="price"><span class=money>$79.00</span></span>
+      
+    </div>
+  </div>
+</div></div>
+              
+            </div>
+          </div>
+          
+
+          
+
+          
+        </div>
+        <!--=======  End of tab product content  =======-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style></style>
+
+<style data-shopify>#section-template--14837291941975__16643893750bafea73{padding-top: 55px !important;
+    padding-bottom: 0px !important;margin-top: 0px !important;
+    margin-bottom: 0px !important;}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__16643893750bafea73{padding-top: 55px !important;
+      padding-bottom: 0px !important;margin-top: 0px !important;
+      margin-bottom: 0px !important;}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__16643893750bafea73{padding-top: 40px !important;
+      padding-bottom: 0px !important;margin-top: 5px !important;
+      margin-bottom: 0px !important;}
+  }</style>
+
+
+
+</div><div id="shopify-section-template--14837291941975__6a9ee165-41d3-4f9c-8858-92aa43b6478f" class="shopify-section"><div id="section-template--14837291941975__6a9ee165-41d3-4f9c-8858-92aa43b6478f" class="blog-testimonial-area" data-section="home_blog">
+  <div  class="custom-container">
+    <div class="section-title-btn-wrap mb-35">
+      
+      <div class="section-title-1">
+        <h2>Blog & Events</h2>
+      </div>
+      
+      
+      <div class="btn-style-2">
+        <a href="blogs/news.html">View all Events <i class="far fa-long-arrow-right"></i></a>
+      </div>
+      
+    </div>
+    
+    <div class="blog---section-start">
+
+      
+       
+      <div class="single---blog">
+        <div class="home-blog-active nav-style-2 nav-style-2-modify-2">
+          
+                  
+          <!-- Single Blog Start -->
+          <div class="blog-wrap">
+            <div class="blog-img">
+              
+              <a class="article__featured-image" href="blogs/news/music-magnate-headphones-1.html">
+                <img src="cdn/shop/articles/04_684500ea-e527-4171-8e1a-07c34d71c243_grande93f1.jpg?v=1674279180" alt="Music magnate headphones" />
+              </a>
+              
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> <time datetime="2023-01-21">January 21, 2023</time> </span>
+              </div>
+              <h3><a href="blogs/news/music-magnate-headphones-1.html">Music magnate headphones</a></h3>
+            </div>
+          </div>
+          
+          <div class="blog-wrap">
+            <div class="blog-img">
+              
+              <a class="article__featured-image" href="blogs/news/macbook-air-labore-et-dolore.html">
+                <img src="cdn/shop/articles/b1_a4c8283b-edba-463f-bcb7-d2cf8f3ce46f_grande2a2d.jpg?v=1674279118" alt="MacBook Air  labore et dolore" />
+              </a>
+              
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> <time datetime="2023-01-21">January 21, 2023</time> </span>
+              </div>
+              <h3><a href="blogs/news/macbook-air-labore-et-dolore.html">MacBook Air  labore et dolore</a></h3>
+            </div>
+          </div>
+          
+          <div class="blog-wrap">
+            <div class="blog-img">
+              
+              <a class="article__featured-image" href="blogs/news/ipsum-available-but-the-majority.html">
+                <img src="cdn/shop/articles/b2_74c4b7c0-e805-4704-a4ab-4e68c8e4eae2_grandeb1d7.jpg?v=1674279232" alt="Ipsum available but the majority" />
+              </a>
+              
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> <time datetime="2023-01-21">January 21, 2023</time> </span>
+              </div>
+              <h3><a href="blogs/news/ipsum-available-but-the-majority.html">Ipsum available but the majority</a></h3>
+            </div>
+          </div>
+          
+          <div class="blog-wrap">
+            <div class="blog-img">
+              
+              <a class="article__featured-image" href="blogs/news/music-magnate-headphones.html">
+                <img src="cdn/shop/articles/b1_3b00d3c2-2f39-45bc-8e1c-fa7af69a0a27_grandedb95.jpg?v=1674279260" alt="Music magnate headphones" />
+              </a>
+              
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> <time datetime="2023-01-21">January 21, 2023</time> </span>
+              </div>
+              <h3><a href="blogs/news/music-magnate-headphones.html">Music magnate headphones</a></h3>
+            </div>
+          </div>
+          
+          <div class="blog-wrap">
+            <div class="blog-img">
+              
+              <a class="article__featured-image" href="blogs/news/2023-newest-macbook-pro.html">
+                <img src="cdn/shop/articles/b1_grande3df2.jpg?v=1674278859" alt="2023 Newest Macbook Pro" />
+              </a>
+              
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> <time datetime="2023-01-21">January 21, 2023</time> </span>
+              </div>
+              <h3><a href="blogs/news/2023-newest-macbook-pro.html">2023 Newest Macbook Pro</a></h3>
+            </div>
+          </div>
+          
+<!-- Single Blog End -->
+
+        </div>
+      </div>
+      
+      
+      
+       
+    </div>
+  </div>
+</div>
+
+
+
+<style></style><style data-shopify>#section-template--14837291941975__6a9ee165-41d3-4f9c-8858-92aa43b6478f{padding-top: 20px !important;
+    padding-bottom: 65px !important;}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__6a9ee165-41d3-4f9c-8858-92aa43b6478f{padding-top: 20px !important;
+      padding-bottom: 65px !important;}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__6a9ee165-41d3-4f9c-8858-92aa43b6478f{padding-top: 5px !important;
+      padding-bottom: 45px !important;}
+  }</style></div><div id="shopify-section-template--14837291941975__1614246508635231a1" class="shopify-section"><div class="banner-area  pb-40" id="section-template--14837291941975__1614246508635231a1">
+  <div  class="custom-container">
+    <div class="row"><div class="col-12 col-xl-12  col-lg-12  col-md-12">
+        <div class="banner-wrap  wow tmFadeInUp mb-30">
+          <div class="banner-img banner-img-zoom">
+            <a href="products/uphone-lightning-cable.html"><img id="bannerImage-22340971823191" class="lazyload " data-src="//drou-electronics-store.myshopify.com/cdn/shop/files/slide61.jpg?v=1674276677" data-sizes="auto" alt=""  >
+</a>
+</div>
+          <div class="banner-content-1  text-center"><span>Big Discount</span><h2>Google Pixel Smart Phone</h2><h3>$350.00</h3><div class="btn-style-1">
+              <a class="font-size-14 btn-1-padding-2" href="products/uphone-lightning-cable.html">Shop Now</a>
+            </div></div></div>
+      </div></div>
+  </div>
+</div>
+
+
+<!--  Top Banner Area End -->
+<style data-shopify>#section-template--14837291941975__1614246508635231a1{padding-top: 0px !important;
+    padding-bottom: 0px !important;margin-top: 0px !important;
+    margin-bottom: 70px !important;}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__1614246508635231a1{padding-top: 0px !important;
+      padding-bottom: 0px !important;margin-top: 0px !important;
+      margin-bottom: 70px !important;}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__1614246508635231a1{padding-top: 0px !important;
+      padding-bottom: 0px !important;margin-top: 0px !important;
+      margin-bottom: 70px !important;}
+  }</style>
+<style>
+  
+  
+  
+
+
+
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 50%;
+    left: 41px;
+    margin-top: -82.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    margin-top: -59.5px;
+}
+
+
+
+    
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    position: relative;
+    text-align: center !important;
+}
+
+
+
+
+    
+
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.banner-area.bnr_style___2 .banner-content-1 {
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-bottom: 67px;
+    margin-top: 0;
+    position: relative;
+    text-align: center !important;
+}
+.banner-area.bnr_style___2 .banner-content-1 h3 {
+    margin: 10px 0 12px;
+}
+
+    
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+}
+
+</style> 
+
+
+
+
+
+
+</div><div id="shopify-section-template--14837291941975__09aa02f8-4e92-4fb6-99e6-dfd2cfd1fcd5" class="shopify-section"><div class="contact-area bg-gray-2" id="section-template--14837291941975__09aa02f8-4e92-4fb6-99e6-dfd2cfd1fcd5">
+  <div class=" custom-container ">
+    <div class="row">
+      
+      
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        
+        <div class="single-contact-wrap text-center wow tmFadeInUp    "><div class="feature-list-icon">
+            <img  src="cdn/shop/files/i2-2_medium_e2b39cba-8c39-4a2d-81c7-8e8688d8c9b5ff21.png?v=1674276675">
+          </div><h4>Free delivery</h4>
+          <p> And free returns. See checkout
+for delivery dates.</p>
+        </div>
+        
+      </div>
+      
+      
+      
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        
+        <div class="single-contact-wrap text-center wow tmFadeInUp    "><div class="feature-list-icon">
+            <img  src="cdn/shop/files/i2_medium_ded55818-afbc-49a9-816a-72379db6213cff21.png?v=1674276675">
+          </div><h4>Pay monthly at 0% APR</h4>
+          <p> Choose to check out with Apple
+Card Monthly Installments.</p>
+        </div>
+        
+      </div>
+      
+      
+      
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        
+        <div class="single-contact-wrap text-center wow tmFadeInUp    "><div class="feature-list-icon">
+            <img  src="cdn/shop/files/gmm_medium_9c0bfab9-b0f5-46ba-ae91-e04fe3803037f8b8.png?v=1674276674">
+          </div><h4>Personalize it</h4>
+          <p> Engrave your device with your
+name or a personal note</p>
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+
+
+<style data-shopify>#section-template--14837291941975__09aa02f8-4e92-4fb6-99e6-dfd2cfd1fcd5{margin-top: 0px !important;
+    margin-bottom: 0px !important;padding-top: 0px !important;
+    padding-bottom: 0px !important;}@media (min-width: 768px) and (max-width: 991px) {
+    #section-template--14837291941975__09aa02f8-4e92-4fb6-99e6-dfd2cfd1fcd5{margin-top: 0px !important;
+      margin-bottom: 0px !important;padding-top: 0px !important;
+      padding-bottom: 0px !important;}
+  }
+  @media (max-width: 767px) {
+    #section-template--14837291941975__09aa02f8-4e92-4fb6-99e6-dfd2cfd1fcd5{margin-top: 80px !important;
+      margin-bottom: 0px !important;padding-top: 0px !important;
+      padding-bottom: 0px !important;}
+  }</style>
+
+<style>
+  
+  
+  
+  
+  
+  
+
+.single-contact-wrap:hover {
+    background-color: transparent;
+}
+.single-contact-wrap.service_active {
+    background: #fff;
+}
+
+.service___style__two.single-contact-wrap {
+    display: flex;
+    text-align: left !important;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+}
+.service___style__two.single-contact-wrap .feature-list-icon {
+    width: 50px;
+    margin-right: 13px;
+    margin-bottom: 0;
+}
+.service___style__two.single-contact-wrap h4 {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+.service___style__two.single-contact-wrap  p {
+    color: #777;
+    line-height: 20px;
+    margin-top: 6px;
+}
+.service___style__two.single-contact-wrap  .feature-content-area {
+    text-align: left !important;
+}
+
+
+
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+
+
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.service___style__two.single-contact-wrap {
+    margin-bottom: 40px;
+}
+
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.service___style__two.single-contact-wrap {
+    margin-bottom: 40px;
+}
+.service___style__two.single-contact-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service___style__two.single-contact-wrap .feature-list-icon {
+    width: 70px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.service___style__two.single-contact-wrap  .feature-content-area {
+    text-align: center !important;
+}
+
+
+  
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+}
+
+  
+</style>
+
+
+
+
+
+
+
+
+
+</div>
+    </main>
+    
+    <div id="shopify-section-footer" class="shopify-section"><div  id="section-footer" >
+  <footer class="footer-area pt-70 pb-30">
+    <div class="custom-container">
+      <div class="row">
+        
+        
+        <div class="col-width-25 custom-common-column">
+          <div class="footer-widget mb-40">
+            
+            <h3 class="footer-title">Contact us</h3>
+            
+            <div class="footer-info">
+              <ul class="footer-block__details-content information">
+                <li><span>Drou Demo Store <br> No. 1259 Freedom, New York <br> United States</span></li>
+<li> <span>+91-987654321</span>
+</li>
+<li><span>demo@exampledemo.com</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <div class="col-width-22 custom-common-column">
+          <div class="footer-widget mb-40">
+            
+            <h3 class="footer-title">Information</h3>
+            
+            <div class="footer-info-list">
+              <ul>
+                
+                
+                <li>
+                  <a href="#">Product Support</a>
+                </li>
+                
+                <li>
+                  <a href="account/login649e.html">Checkout</a>
+                </li>
+                
+                <li>
+                  <a href="#">License Policy</a>
+                </li>
+                
+                <li>
+                  <a href="#">Affiliate</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <div class="col-width-22 custom-common-column">
+          <div class="footer-widget mb-40">
+            
+            <h3 class="footer-title">Customer Service</h3>
+            
+            <div class="footer-info-list">
+              <ul>
+                
+                
+                <li>
+                  <a href="pages/about-us.html">Help Center</a>
+                </li>
+                
+                <li>
+                  <a href="pages/about-us.html">Redeem Voucher</a>
+                </li>
+                
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                
+                <li>
+                  <a href="#">Policies & Rules</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="col-width-31 custom-common-column">
+          <div class="footer-widget mb-40">
+            
+            <h3 class="footer-title">Download Our App</h3>
+            
+            
+            <div class="app-visa-wrap">
+              
+              <p>Download our App and get extra 15% Discount on your first Order..!</p>
+              
+              <div class="app-google-img">
+                <a href="#"><img src="../cdn.shopify.com/s/files/1/0495/8021/2387/files/app-storefc7c.jpg?v=1603274799" alt=""></a>
+                <a href="#"><img src="../cdn.shopify.com/s/files/1/0495/8021/2387/files/google-playbfa4.jpg?v=1603274809" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </footer>
+</div>
+
+<style>
+
+
+  #scrollUp {
+    background: #e52e06;
+    color: #fff;
+    border-color: #e52e06; 
+  }
+  #scrollUp:hover {
+    background: #333333;
+    color: #fff;
+    border-color: #333333; 
+  }
+  
+  
+  #section-footer{
+    background-color: #ffffff;
+  }
+  
+  .footer-other-page#section-footer{
+    background-color: #f8f8f8;
+  }
+  #section-footer  .footer-widget h3.footer-title{
+    color:  #333333;
+  }
+  #section-footer .copyright p, #section-footer  .footer-widget .footer-info-list ul li a,.footer-widget .app-visa-wrap p,ul.footer-block__details-content.information li {
+    color:  #444444;
+  }
+  #section-footer  .footer-widget .footer-info-list ul li a:hover {
+    color:  #4e97fd;
+  }
+
+  
+  
+  
+  
+  
+
+
+
+  
+</style>
+
+
+
+</div>
+    <div id="shopify-section-footer-copy-right" class="shopify-section">
+<div  id="section-footer-copy-right" >
+  <footer class="footer-copyright-area">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 col-sm-12">
+          <p>Copyright © Team90Degree | Built with Drou by Team90Degree.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12 col-sm-12">
+          <div class="payment-img">
+            <a href="#"><img src="../cdn.shopify.com/s/files/1/0495/8021/2387/files/payment-method6649.png?v=1603274813" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div><style>
+
+
+
+
+  
+</style>
+
+
+
+</div>
+    
+<!-- Necessary JS --><script src="cdn/shop/t/42/assets/fastclick.minbf9b.js?v=29723458539410922371689877192"></script>
+<script src="cdn/shop/t/42/assets/timber088e.js?v=132601391146540697821689877262"></script>
+<script src="cdn/shop/t/42/assets/wishlist630b.js?v=71894683372638602231689877244" ></script><script src="cdn/shop/t/42/assets/jquery-ui.min6dd5.js?v=144151410727154103311689877207"></script>
+
+
+
+<script>
+  
+</script>
+<!-- modalAddToCart -->
+<div class="modal fade ajax-popup" id="modalAddToCart" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog white-modal modal-md">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-content-text">
+          
+          <div class="popup-image">
+            <img class="popupimage" src="#">
+          </div>
+          
+          <div class="popup-content">
+            <h6 class="productmsg"></h6>
+            <p class="success-message"><span class="fa fa-check-circle"></span>Added to cart successfully!</p> 
+            <div class="modal-button">
+              <a href="cart.html" class="btn btn-cart">View Cart</a>
+              <a href="account/login649e.html" class="btn btn-cart">Checkout</a>
+            </div>
+          </div>
+          
+          <div class="right-popup-content">
+          	<p class="total_item"><span class="fa fa-shopping-basket"></span> There are <span class="cart_count bigcounter">0</span> Items In Your Cart.</p>
+            <p class="cart_total"> <span class="total_price_label">Total Price: </span> <span class="shopping-cart__total"><span class=money>$0.00</span></span></p>
+            <div class="continue_btn">
+              <a href="collections/all.html"> Continue Shopping<i class="fa fa-arrow-right"></i>   </a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pe-7s-close"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modalAddToCart -->
+
+<!-- modalAddToCart Error -->
+<div class="modal fade ajax-popup error-ajax-popup" id="modalAddToCartError" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog white-modal modal-md">
+    <div class="modal-content ">
+      <div class="modal-body">
+        <div class="modal-content-text">
+          <p class="error_message"></p>
+        </div>
+        <div class="modal-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><div class="modal fade productModal" id="quickViewModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span class="close-icon" aria-hidden="true"><i class="pe-7s-close"></i></span>
+      </button>         
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="qwick-view-left">
+              <div class="quick-view-learg-img">
+                <div class="quick-view-tab-content tab-content">
+                  <div class="product-main-image__item">
+                    <div class="img_box_1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="qwick-view-right">
+              <div class="qwick-view-content">
+                <h4 class="product_title">FROM_JS</h4>
+                <div class="product-price product-info__price price-part">
+                  <span class="price-box__new">jsprice</span>
+                  <span class="main">jsprice</span>
+                </div>
+                <div class="product-rating spr-badge-caption-none">
+                  <div class="quick-view-rating rating">FROM_JS</div>
+                </div>
+
+                <div class="short-description product-des">FROM_JS</div>
+
+                <form id="add-item-qv" action="https://drou-electronics-store.myshopify.com/cart/add" method="post">
+                  <div class="quick-view-select variants select-option-part"></div>
+                  <div class="quickview-plus-minus">
+                    <div class="cart-plus-minus">
+                      <input type="text" value="01" name="quantity" class="cart-plus-minus-box">
+                    </div>
+                    <div class="quickview-btn-cart">
+                      <button type="submit" class="addtocartqv theme-default-button">Add to cart</button>
+                    </div>
+                  </div>
+                  <script>
+                    jQuery('.addtocartqv').click(function(e) {
+                      e.preventDefault();
+                      Shopify.addItemFromFormStart('add-item-qv', jQuery(this).attr('id'));
+                    });
+                  </script> 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="quickViewModal_info" style="display: none;">
+  <div class="button">Add to cart</div>
+  <div class="button_added">Added</div>
+  <div class="button_error">Limit Products</div>
+  <div class="button_wait">Wait..</div>
+</div>
+
+
+
+
+<script>  
+  var mainImage = '';
+  jQuery(function ($) {
+
+    quiqview = function(product_handle) {
+      Shopify.getProduct(product_handle);
+    }
+    Shopify.onProduct = function(product) {
+      $('.viewfullinfo').attr('href', product.url);
+
+      // product description without shortcode
+      text_truncate = function(str, length, ending) {
+        if (length == null) {
+          length = 500;
+        }
+        if (ending == null) {
+          ending = '...';
+        }
+        if (str.length > length) {
+          return str.substring(0, length - ending.length) + ending;
+        } else {
+          return str;
+        }
+      };
+
+      var _parent = '#quickViewModal';
+      $(_parent+' .product_title').text(product.title);
+
+
+
+      // product rating
+      $(_parent+' .rating').empty();
+      $(_parent+' .rating').append("<span class=\"shopify-product-reviews-badge\" data-id=\""+product.id+"\"></span>");
+
+
+      //check variants
+      var variant = '';
+
+      for (i = 0; i < product.variants.length; i++) {
+        if(product.variants[i].inventory_quantity > 0) {
+          variant = product.variants[i];
+          break;
+        }
+      }
+
+      if(variant == '') {
+        for (i = 0; i < product.variants.length; i++) {
+          if(product.variants[i].inventory_policy == "continue") {
+            variant = product.variants[i];
+            break;
+          }
+        }
+        if(variant == '') {
+          variant = product.variants[0];
+        }
+      }
+
+      mainImage = product.featured_image;
+      var shopifyimgurl = variant.featured_image ? variant.featured_image.src : product.featured_image;
+      var imgurl = "<img class=\"full-width\" alt=\"\" src = \""+shopifyimgurl+"\" >";
+      jQuery(_parent+' .product-main-image__item .img_box_1').empty();
+      jQuery(_parent+' .product-main-image__item .img_box_1').append(imgurl);
+      jQuery(_parent+' .product-main-image__item .img_box_2').empty();
+      jQuery(_parent+' .product-main-image__item .img_box_2').append(imgurl);
+
+      // product description with shortcode
+      var desc = product.description;
+      if (desc.indexOf("[short_description]") >= 0) {
+        desc = desc.split("[short_description]");
+        desc = desc[1].split("[/short_description]");
+        $(_parent+' .product-des').show();
+        $(_parent+' .product-des').html(desc[0]);
+      }
+      else {
+        $(_parent+' .product-des').html(text_truncate(product.description,250));
+      }
+
+      //set variants property
+      var inv_qua = variant.inventory_quantity;
+      //price
+      if(variant.price < variant.compare_at_price) {
+        $('.price-part .main').addClass('amount');
+        $('.price-part .price-box__new').show();
+        changePriceValue('.price-part .main', variant.compare_at_price);
+        changePriceValue('.price-part .price-box__new', variant.price);
+      }
+      else {
+        $('.price-part .price-box__new').hide();
+        $('.price-part .main').removeClass('amount');
+        changePriceValue('.price-part .main', variant.price);
+      }
+
+      // Variants select
+      if(product.variants.length > 1) {
+        var variants_margin = product.options.length == 2 ? 'variants_margin' : '';
+
+        var select = '<select id="product-select-qv" name="id">';
+        var selected = 'selected';
+        for (i = 0; i < product.variants.length; i++) {
+          var _var = product.variants[i];
+          if(_var.available) {
+            select += '<option value="' + _var.id + '"' + selected +'>' + _var.title + ' - ' + Shopify.formatMoney(_var.price, "<span class=money>${{amount}}</span>") + '</option>'
+                                                                                                                   selected = '';
+                                                                                                                   }
+                                                                                                                   }
+                                                                                                                   select += '</select>';
+
+                                                                                                                   var variant_select = '<div class="variants_selects ' + variants_margin + '">';
+                                                                                                                   variant_select += select;
+                                                                                                                   variant_select += '</div><div class="divider divider--sm"></div>';
+                                                                                                                   select = variant_select;
+                                                                                                                   }
+                                                                                                                   else {
+                                                                                                                   var select = '<input type="hidden" name="id" value="' + product.variants[0].id + '" />';
+                                                                                                                   }
+                                                                                                                   $('.variants').empty();
+            $('.variants').html(select);
+
+            //parametres
+            setParametresText(_parent+' .product-sku', variant.sku);
+            if(jQuery(_parent + ' .product-sku').length) {
+              var $ava = jQuery(_parent + " .product-info__availabilitu");
+              if(variant.sku != "") {
+                if($ava.hasClass('pull-left')){ $ava.removeClass('pull-left') }
+              } else {
+                if(!$ava.hasClass('pull-left')){ $ava.addClass('pull-left') }
+              }
+            }
+
+            //quantity
+            var out_of_stock = false;
+            if(variant.inventory_management) {
+              if(inv_qua > 0) {
+                $(_parent+' .product-availability').text(inv_qua + " In Stock");
+                                                         }
+                                                         else {
+                                                         out_of_stock = true;
+                                                         $(_parent+' .product-availability').text("In Stock");
+                                                                                                  }
+                                                                                                  }
+                                                                                                  else {
+                                                                                                  $(_parent+' .product-availability').text("Many in stock");
+                                                                                                                                           }
+
+                                                                                                                                           // button
+                                                                                                                                           if(!out_of_stock || variant.inventory_policy == "continue") {        
+                  $('.product-available').show();
+                  $('.product-disable').hide();
+                  $('.addtocartqv').attr('id', product.id );
+                }
+                else {
+                  $('.product-available').hide();
+                  $('.product-disable').show();
+                }
+
+                if (product.available && product.variants.length > 1) {
+                  new Shopify.OptionSelectors("product-select-qv", { product: product, onVariantSelected: selectCallbackQv, enableHistoryState: true });
+
+                  if($('#quickViewModal .variants_selects .selector-wrapper').length > 0) {
+                    $.each( jQuery('#quickViewModal .variants_selects .selector-wrapper'), function(index) {
+                      $(this).find('label').text(product.options[index].name);
+                    });
+                  }
+                }
+                else {
+                  jQuery('.currency .active').trigger('click');
+                }
+                selectGrid(_parent);
+
+                if($(".spr-badge").length > 0) {
+                  $.getScript(window.location.protocol + "//productreviews.shopifycdn.com/assets/v4/spr.js");
+                }
+
+                if($(".selector-wrapper label").length) {
+                  $(".selector-wrapper label").each(function( index ) {
+                    $(this).text(jQuery(this).text() + ":");
+                  });
+                }
+
+                $(_parent).modal('show');
+
+                if( !( 'ontouchstart' in window ) &&
+                   !navigator.msMaxTouchPoints &&
+                   !navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
+
+                $j('body').css("top", -$j('body').scrollTop());
+                $j('body').addClass("no-scroll");
+                $j('.close').click(function(){
+                  var top = parseInt($j('body').css("top").replace("px", ""))*-1;
+                  $j('body').removeAttr("style");
+                  $j('body').removeClass("no-scroll");
+                  $j('body').scrollTop(top);
+                });
+              }
+
+              function setParametresText(obj, value) {
+                if(value != '') {
+                  $(obj).parent().show();
+                  $(obj).text(value);
+                }
+                else {
+                  $(obj).parent().hide();
+                }
+              }
+
+              function changePriceValue (cell, value) {
+                $(cell).html(Shopify.formatMoney(value, "<span class=money>${{amount}}</span>"));
+                                                 };
+
+                                                 });
+
+
+
+                             var selectCallbackQv = function(variant, selector) {
+
+                  var _parent = '#quickViewModal';
+                  var _parentprice = _parent + ' .price-part';
+                  if (!variant) {
+                    jQuery(_parent + " .price-box").hide();
+                    jQuery(_parent + " .qwt").hide();
+                    jQuery(_parent + " .control-console").hide();
+                    jQuery(_parent + ' .addtocartqv').attr('disabled','disabled');
+                    jQuery(_parent + ' .addtocartqv').text('Unavailable');
+                                                           return false;
+                                                           }
+
+                                                           jQuery(_parent + " .price-box").show();
+                    jQuery(_parent + " .qwt").show();
+                    jQuery(_parent + " .control-console").show();
+
+                    if(variant.price < variant.compare_at_price){
+                      jQuery(_parentprice + ' .main').addClass('price-box__old');
+                      jQuery(_parentprice + ' .price-box__new').show();
+                      changePriceValue(_parentprice + ' .main', variant.compare_at_price);
+                      changePriceValue(_parentprice + ' .price-box__new', variant.price);
+                    } else {
+                      jQuery(_parentprice + ' .price-box__new').hide();
+                      jQuery(_parentprice + ' .main').removeClass('price-box__old');
+                      changePriceValue(_parentprice + ' .main', variant.price);
+                    }
+
+                    newVariantTextDataQv(_parent + ' .product-sku', variant.sku);
+
+                    if(jQuery(_parent + ' .product-sku').length) {
+                      var $ava = jQuery(_parent + " .product-info__availabilitu");
+                      if(variant.sku != "") {
+                        if($ava.hasClass('pull-left')){ $ava.removeClass('pull-left') }
+                      } else {
+                        if(!$ava.hasClass('pull-left')){ $ava.addClass('pull-left') }
+                      }
+                    }
+
+                    if (variant.available) {
+                      if (variant.inventory_management == null) {
+                        jQuery(_parent + " .product-availability").text("Many in stock");
+                                                                        } else {
+                                                                        jQuery(_parent + " .product-availability").text(" Many in stock");
+                                                                                                                        }
+                                                                                                                        } else {
+                                                                                                                        jQuery(_parent + " .product-availability").text("Sold Out");
+      }
+
+	  var shopifyimgurl = variant.featured_image ? variant.featured_image.src : mainImage;
+      var imgurl = "<img class=\"full-width\" alt=\"\" src = \""+shopifyimgurl+"\" >";
+	  if(jQuery(_parent+' .product-main-image__item .img_box_1').children().length > 0) {
+                          var detach = jQuery(_parent+' .product-main-image__item .img_box_1 img').detach();
+                          jQuery(_parent+' .product-main-image__item .img_box_2').empty();
+                          jQuery(_parent+' .product-main-image__item .img_box_2').append(detach);
+                        }
+                        jQuery(_parent+' .product-main-image__item .img_box_1').empty();
+                        jQuery(_parent+' .product-main-image__item .img_box_1').append(imgurl);
+
+                        if (variant && variant.available) {
+                          jQuery(_parent + ' .addtocartqv').removeAttr('disabled');
+                          jQuery(_parent + ' .addtocartqv').html('Add to Cart');
+                                                                 jQuery(_parent + " .control-console").show();
+                        } else {
+                          jQuery(_parent + ' .addtocartqv').attr('disabled','disabled');
+                          jQuery(_parent + ' .addtocartqv').text('Unavailable');
+                                                                 jQuery(_parent + " .control-console").hide();
+                        }
+
+                        jQuery('.currency .active').trigger('click');
+                      };
+
+                      function changePriceValue (cell, value) {
+                        jQuery(cell).html(Shopify.formatMoney(value, "<span class=money>${{amount}}</span>"));
+                                                              };
+
+                                                              function newVariantTextDataQv (obj, value) {
+                                          if(value != '') {
+                          jQuery(obj).parent().show();
+                          jQuery(obj).text(value);
+                        }
+                        else {
+                          jQuery(obj).parent().hide();
+                        }
+                      };
+
+
+                      function selectGrid(_parent) {
+                        setTimeout(timeout, 5);
+                        function timeout() {
+                          if(jQuery(_parent + " .selector-wrapper").length > 2){
+                            jQuery(_parent + " .single-option-selector").addClass("select--wd");
+                          } else if(jQuery(_parent + " .selector-wrapper").length == 1){
+                            jQuery(_parent + " .single-option-selector").before("<label></label>");
+                                                                                jQuery(_parent + " .single-option-selector").addClass("select--wd");
+                          }
+                        }
+                      };
+</script>
+
+<!-- END QUICKVIEW PRODUCT -->
+
+<script>
+
+  $(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
+  $(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
+  $(".qtybutton").on("click", function() {
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+    if ($button.text() == "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+      // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+    $button.parent().find("input").val(newVal);
+  });
+</script>
+
+
+<!-- Recently Viewed Products --><script src="../cdn.shopify.com/s/javascripts/currencies.js"></script>
+<script src="cdn/shop/t/42/assets/jquery.currencies.minb681.js?v=35452912321688254271689877208"></script>
+
+<script>
+
+  // Pick your format here:
+  // money_format or money_with_currency_format
+  Currency.format = 'money_format';
+
+  var shopCurrency = 'USD';
+
+  /* Sometimes merchants change their shop currency, let's tell our JavaScript file */
+  Currency.moneyFormats[shopCurrency].money_with_currency_format = "${{amount}} USD";
+  Currency.moneyFormats[shopCurrency].money_format = "${{amount}}";
+
+  var cookieCurrency;
+  try {cookieCurrency = Currency.cookie.read();} catch (err) {} // ignore errors reading cookies
+
+  // Fix for customer account pages.
+  jQuery('span.money span.money').each(function() {
+    jQuery(this).parents('span.money').removeClass('money');
+  });
+
+  // Saving the current price.
+  jQuery('span.money').each(function() {
+    jQuery(this).attr('data-currency-USD', jQuery(this).html());
+                      });
+
+    // Select all your currencies buttons.
+    var buttons = jQuery('.currency li');
+
+    // If there's no cookie or it's the shop currency.
+    if (cookieCurrency == null || cookieCurrency === shopCurrency) {
+      buttons.removeClass('active');
+      jQuery('.currency li[data-currency=' + shopCurrency + ']').addClass('active');
+      Currency.currentCurrency = shopCurrency;
+      jQuery(".current-currency").text(shopCurrency);
+    }
+    else {
+      Currency.convertAll(shopCurrency, cookieCurrency);
+      buttons.removeClass('active');
+      jQuery('.currency li[data-currency=' + cookieCurrency + ']').addClass('active');
+      jQuery(".current-currency").text(cookieCurrency);
+    }
+
+    // When customer clicks on a currency button.
+    buttons.click(function() {
+      buttons.removeClass('active');
+      var cur = jQuery(this).attr('data-currency');
+      jQuery( ".currency li[data-currency='" + cur + "']" ).addClass('active');
+
+      var newCurrency =  jQuery(this).attr('data-currency');
+      if(newCurrency == Currency.currentCurrency)
+      {
+        Currency.convertAll(shopCurrency, newCurrency);
+      }
+      else
+      {
+        Currency.convertAll(Currency.currentCurrency, newCurrency);
+      }
+
+      jQuery(".current-currency").text(cur);
+    });
+
+    // For product options.
+    var main_selectCallback = window.selectCallback;
+    var selectCallback = function(variant, selector) {
+      main_selectCallback(variant, selector);
+      Currency.convertAll(shopCurrency, jQuery(".currency .active").attr('data-currency'));
+    };
+</script><script>
+  $('[data-countdown]').each(function() {
+    var $this = $(this), finalDate = $(this).data('countdown');
+    $this.countdown(finalDate, function(event) {
+      $this.html(event.strftime('<div class="count"><p>%D</p><span>days</span></div><div class="count"><p>%H</p><span>Hour</span></div><div class="count"><p>%M</p><span>Mint</span></div><div class="count"><p>%S</p><span>Sec</span></div>'));
+    });
+  });
+</script><div class="loading-modal compare_modal">Translation missing: en.general.search.loading</div>
+<div class="ajax-success-compare-modal compare_modal" id="moda-compare" tabindex="-1" role="dialog" style="display:none">
+  <div class="overlay"> </div>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content content" id="compare-modal">
+      <div class="modal-header">
+        <div class="modal-close">
+          <span class="compare-modal-close"> <i class="pe-7s-close"></i> </span>
+        </div>
+        <h4 class="modal-title">Compare Product</h4>
+      </div>
+      <div class="modal-body">
+        <div class="table-wrapper">
+          <table class="table table-hover table-responsive">
+            <thead>
+              <tr class="th-compare">
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="table-compare">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- BEEKETINGSCRIPT CODE START --><!-- BEEKETINGSCRIPT CODE END -->
+    <!-- popup-search -->
+    <div class="search-popup-wrap main-search-active">
+  <div class="mobile-menu-close close-style-wrap">
+    <button class="close-style search-close">
+      <i class="icon-top"></i>
+      <i class="icon-bottom"></i>
+    </button>
+  </div>
+  <div class="search-popup-content">
+     <predictive-search id="predictive-search-toggle" search-open="false">
+
+
+
+                  <form action="https://drou-electronics-store.myshopify.com/search" method="get" role="search" class="search-popup-form">
+                    
+                      <input
+                           id="Search"
+                           type="search"
+                           name="q"
+                           value=""role="combobox"
+                           aria-expanded="false"
+                           aria-owns="predictive-search-results-list"
+                           aria-controls="predictive-search-results-list"
+                           aria-haspopup="listbox"
+                           aria-autocomplete="list"
+                           autocorrect="off"
+                           autocomplete="off"
+                           autocapitalize="off"
+                           spellcheck="false"class="nrb_input"
+                           placeholder="Search our store "
+                           >
+                        <input name="options[prefix]" type="hidden" value="last"><div id="predictive-search" tabindex="-1"></div></form>
+
+
+
+       
+     </predictive-search>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+
+
+  
+<style type="text/css">
+  
+  button > * {
+    pointer-events: none;
+  }
+</style>
+<script type="text/javascript">
+//Isolate script scope
+(function (){
+  window.baMsg = {
+     "remote_id": "36748394555",
+     "shopify_domain": "makali-rtl.myshopify.com",
+     "fb_page_id": "",
+     "locale": "en_US",
+     "app_id": 369783430202516,
+     "use_stm_callback": "",
+     "user_ref": 'ba_36748394555_' + Math.random().toString(36).substring(5) + '_' + Math.floor(Math.random() * (9999999 - 1000000)),
+     "atc_preference": "fb",
+     "active_fb_atc_shown": false,
+     "active_sms_atc_shown": false,
+     "app_url": "/apps/ba_fb_app",
+     "page_url": window.location.href,
+     "is_preview": (window.location.href.indexOf("ba-preview") != -1),
+     "is_generating": (window.location.href.indexOf("ba_action=generate") != -1),
+     "fb_active": false,
+     "sms_active": false,
+     "push_active": true,
+     "ab_active": false
+  };
+
+  baMsg.debug = function (enabled) {
+    if (enabled === false) {
+      baMet.destroyCookie("baMsg_debug");
+    } else {
+      baMet.setCookie("baMsg_debug", "t", 365 * 24 * 60);
+    }
+    return true;
+  };
+
+  baMsg.log = function(message){
+    if (baMet.getCookie("baMsg_debug")) {
+      window.console.log(message);
+    }
+  }
+
+
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  function getUrlParam(paramName) {
+    var params = {};
+    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+      params[key] = value;
+    });
+    return params[paramName];
+  }
+
+  function hasFlag(flag){
+    return window.baMsg.settings.flags[flag] == true
+  }
+
+  function getAtcButton(){
+    var addToCartBtn = document.querySelector('[name=add]');
+    if (!addToCartBtn || addToCartBtn.length === 0){
+      addToCartBtn = document.getElementsByClassName("btn-addtocart")[0];
+    }
+    if (!addToCartBtn || addToCartBtn.length === 0){
+      addToCartBtn = document.getElementsByClassName("button-cart")[0];
+    }
+    if (!addToCartBtn || addToCartBtn.length === 0){
+      addToCartBtn = document.getElementsByClassName("product-add")[0];
+    }
+    if (!addToCartBtn || addToCartBtn.length === 0){
+      addToCartBtn = document.getElementsByClassName("add-to-cart")[0] !== undefined ? document.getElementsByClassName("add-to-cart")[0].getElementsByTagName('input')[0] : null;
+    }
+    return addToCartBtn;
+  }
+
+  function canDisplayByDevice(devices) {
+    if (devices !== 'all') {
+      var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+      if (devices === 'desktop' && isMobile){ return false;}
+      if (devices === 'mobile' && !isMobile){ return false;}
+    }
+    return true;
+  }
+
+  function getProductForm() {
+    var form = document.getElementById('add-item-form');
+    if (!form || form.length === 0){
+        form = document.getElementsByClassName("product-form")[1];
+    }
+    if (!form || form.length === 0){
+        form = document.querySelector("form[action='/cart/add']");
+    }
+    if (!form || form.length === 0){
+        form = document.querySelector("form[action^='/cart/add']");
+    }
+    if (!form || form.length === 0){
+        form = document.querySelector("form[action$='/cart/add']");
+    }
+    if (!form || form.length === 0){
+        form = document.querySelector("form[action='/cart/add.js']");
+    }
+    if (!form || form.length === 0){
+        form = document.querySelector("form[action='/cart/add?return=/']");
+    }
+    if (!form || form.length === 0){
+        form = document.getElementsByClassName("product-form")[0];
+    }
+    if (!form || form.length === 0){
+        form = document.getElementsByClassName("btn-addtocart")[0];
+    }
+    return form
+  }
+
+  function canDisplayByRules(rules) {
+    var pageURL = window.location.href;
+    var url = new URL(pageURL.html);
+    var pathname = (url.pathname.length === 1) ? '' : url.pathname.length;
+    var urlWOParams = url.origin + pathname;
+
+    var canDisplay = rules.length === 0;
+
+    for (var i = 0; i < rules.length; i++) {
+      var rule = rules[i];
+
+      if (rule.rule === 'match') {
+        if (rule.operator === 'true') {
+          if (rule.string === pageURL || rule.string === urlWOParams) {
+            canDisplay = true;
+          }
+        } else if (rule.string === pageURL || rule.string === urlWOParams) {
+          canDisplay = false;
+          break;
+        }
+      }
+
+      if (rule.rule === 'begin_with') {
+        var stringLength = rule.string.length;
+
+        if (rule.operator === 'true') {
+          if (rule.string === pageURL.substr(0, stringLength) || rule.string === urlWOParams.substr(0, stringLength)) {
+            canDisplay = true;
+          }
+        } else if (rule.string === pageURL.substr(0, stringLength) || rule.string === urlWOParams.substr(0, stringLength)) {
+          canDisplay = false;
+          break;
+        }
+      }
+
+      if (rule.rule === 'contains') {
+        if (rule.operator === 'true') {
+          if (pageURL.indexOf(rule.string) !== -1 || urlWOParams.indexOf(rule.string) !== -1) {
+            canDisplay = true;
+          }
+        } else if (pageURL.indexOf(rule.string) !== -1 || urlWOParams.indexOf(rule.string) !== -1) {
+          canDisplay = false;
+          break;
+        }
+      }
+    }
+
+    return canDisplay;
+  }
+
+  function updateSubscriberHash(updateHash){
+    var updatedSubscriberHash = window.baMsg.subscriber_hash;
+    for (var prop in updateHash) {
+      updatedSubscriberHash[prop] = updateHash[prop];
+    }
+    var subscriberKey = "ba_msg_subscriber_" + baMet.getVisitorToken();
+    localStorage.setItem(subscriberKey, JSON.stringify(updatedSubscriberHash));
+  }
+
+  function applyMet(metName){
+    eventHash = {}
+    //baMet.apply(metName, eventHash, "ba_msg");
+  }
+
+  function getCartSessionId(){
+    return baMet.getCookie("baMet_cs_id");
+  }
+
+  function isHidden(el) {
+    return (el.offsetParent === null)
+  }
+
+  function handleAtcClick(event){
+    var subscriberHash = window.baMsg.subscriber_hash;
+    var atcPref = window.baMsg.atc_preference;
+    if (atcPref == 'fb'){
+      window.baMsg.showFbAtcModal(event);
+    } else if (atcPref == 'sms'){
+      window.baMsg.showSmsAtcModal(event);
+    }
+  }
+
+  function listentoAtc(){
+    window.baMet.onBaEv("click", ".product-form__cart-submit, .product-form__cart-submit span, #AddToCart-product-template, .product-atc-btn, .product-menu-button.product-menu-button-atc, .button-cart, .product-add, .add-to-cart input, .btn-addtocart, [name=add]", function (e){
+      baMsg.log(e)
+      var addToCartBtn = (e.target);
+      window.baMsg.active_atc = addToCartBtn;
+      addToCartBtn.classList.add('ba-click-ready');
+      if (window.baMsg.fb_active && window.baMsg.fb_page_id){
+        try {
+          handleAtcClick(e)
+        } catch(err){
+          console.log(err);
+        }
+      }
+    });
+  }
+
+  function documentReady(callback) {
+    document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+  }
+
+documentReady(function() {
+  var baFbPresent = (document.getElementsByTagName('head')[0].innerHTML.search("ba_fb_" + window.baMsg.remote_id) > 0);
+  if (!baFbPresent){return;}
+
+  window.baMsg.visitor_token = window.baMet.getVisitorToken();
+  window.baMsg.session_token = window.baMet.getVisitToken();
+  window.baMsg.cart_uid  = baMet.getCookie('baMet_cs_id');
+  window.baMsg.browser_info = window.baMet.getBrowserInfo();
+
+  var baSubscriberKey = "ba_msg_subscriber_" + window.baMsg.visitor_token;
+  var rawSubscriber   = localStorage.getItem(baSubscriberKey);
+  var baSubscriberHash = JSON.parse(rawSubscriber || "{}");
+  window.baMsg.subscriber_hash = baSubscriberHash;
+
+  var baId = window.baMet.getCookie("baid");
+  var ba_fb_opted_in_cookie = window.baMet.getCookie("ba_opted_in");
+
+  if(baId && ba_fb_opted_in_cookie && !rawSubscriber){
+    window.baMsg.handle_legacy = true;
+    //This is a V1 subscriber. Upgrade to V2
+    var fbchk_opted_in_cookie = window.baMet.getCookie("fbchk_opted_in");
+    var ba_modal_opted_in_cookie = window.baMet.getCookie("ba_modal_opted_in");
+    var ba_atc_popup_opted_in_cookie = window.baMet.getCookie("ba_atc_popup_opted_in");
+    var rightNow = parseInt(new Date().getTime());
+    var updateHash = {legacy: true};
+    if (ba_fb_opted_in_cookie){
+      updateHash["ba_fb_opted_in"] = rightNow;
+    }
+    if (fbchk_opted_in_cookie){
+      updateHash["ba_fbchk_opted_in"] = rightNow;
+    }
+    if (ba_modal_opted_in_cookie){
+      updateHash["ba_fb_modal_opted_in"] = rightNow;
+    }
+    if (ba_atc_popup_opted_in_cookie){
+      updateHash["ba_fb_atc_popup_opted_in"] = rightNow;
+    }
+    updateSubscriberHash(updateHash);
+    var data = {
+      action_type: 'update_legacy_sub', session_token: baId,
+      visitor_token: window.baMsg.visitor_token, cart_uid: window.baMsg.cart_uid,
+      tz_offset: window.baMsg.browser_info.tz_offset, cart_token: window.baMet.getCookie('cart')
+    }
+    baMet.sendRequest(window.baMsg.app_url, data, function(resp) {
+      baMsg.log('legacy sub updated')
+      updateSubscriberHash({legacy_updated: rightNow});
+    });
+  }
+
+
+  if (window.BoosterApps.common.customer && !window.baMsg.subscriber_hash.customer_synced_at){
+    var data = {
+      action_type: 'sync_customer', visitor_token: window.baMsg.visitor_token,
+      sync_data: window.BoosterApps.common.customer
+    }
+    baMet.sendRequest(window.baMsg.app_url, data, function(resp) {
+      baMsg.log('sub sync updated')
+      rightNow = parseInt(new Date().getTime());
+      updateSubscriberHash({customer_synced_at: rightNow, cus_id: window.BoosterApps.common.customer.id});
+    });
+  }
+
+
+  window.baMsg.settings = {
+    fb_base: {
+      "id":48,
+      "shop_id":36748394555,
+      "active": 0,
+      "visible":1,
+      "type":"discount",
+      "text":"Get 10% discount",
+      "checked_text": "Your discount: %discountCode",
+      "placement": "under_cart",
+      "text_placement": "above",
+      "background_color": "#fff",
+      "icon_background_color": "#f7f7f7",
+      "color": "#000",
+      "checked_color": "#000",
+      "border_color":"#e5e5e5",
+      "font_size":14,
+      "font_style":"normal",
+      "margin_top":15,
+      "margin_bottom":10,
+      "icon":"discount_1",
+      "checked_icon":"check_1",
+      "border_width":1,
+      "border_style":"solid",
+      "border_radius":5,
+      "align":"left",
+      "button_text":"Get Discount Code",
+      "button_background_color":"#F6F6F6",
+      "button_text_color":"#555555",
+      "button_font_size":14,
+      "button_font_style":"bold",
+      "button_border_color":"#eee",
+      "button_border_width":1,
+      "button_border_radius":5,
+      "discount_code":"<PUT YOUR DISCOUNT CODE HERE>",
+      "subtitle": ""
+    },
+    fb_modal: {
+      "shop_id":36748394555,
+      "active":0,
+      "title":"Hi! Opt-in and recieve a discount!",
+      "subtitle":"Just click on &quot;Send To Messenger&quot; and you will automatically be opted-in!",
+      "submitted_title":"Thanks for opt-ing in!",
+      "submitted_subtitle":"Your discount code is: %discountCode!&#39;",
+      "button_text":"View in Messenger",
+      "send_color":"blue",
+      "send_size":"large",
+      "background_color":"#fff",
+      "title_color":"#000",
+      "subtitle_color":"#808080",
+      "button_color":"#fff",
+      "button_text_color":"#000",
+      "border_color":"#eee",
+      "display":"immediately",
+      "delay":3,
+      "devices":"all",
+      "message":"Hi! Thanks for opt-ing in. Your discount code is: %discountCode! Enjoy!",
+      "image_name":"",
+      "submitted_image_name":"",
+      "image_placement":"above_title",
+      "submitted_image_placement":"above_title",
+      "discount_code":"DISCOUNT_CODE_HERE",
+      "rules": JSON.parse('[] ')
+    },
+    fb_atc_popup: {
+      "shop_id":36748394555,
+      "active":1,
+      "title":"Join us on Messenger",
+      "paragraph":"Sign up and gain access to new products, exclusive deals, and discounts before anybody else!",
+      "no_thanks_text":"No thanks",
+      "close_button":"1",
+      "plugin_type":"send_to_messenger",
+      "button_cta":"SEND_TO_MESSENGER",
+      "button_cta_color":"blue",
+      "header_bg_color":"#f4f6f8",
+      "body_bg_color":"#fff",
+      "header_text_color":"#626974",
+      "paragraph_text_color":"#626974",
+      "no_thanks_text_color":"#626974"
+    }
+  }
+
+  //update last seen at if subscriber active
+  if (window.baMsg.subscriber_hash.ba_fb_opted_in && window.baMsg.ab_active && window.baMsg.cart_uid && !window.baMsg.handle_legacy){
+    var data = {"action_type": 'heartbeat', visitor_token: window.baMsg.visitor_token, "cart_uid": window.baMsg.cart_uid}
+    baMet.sendRequest(window.baMsg.app_url, data, function(resp) {
+      baMsg.log('heartbeat recorded')
+    });
+  }
+
+  if (window.baMsg.is_generating == true){
+    var cartUid = getParameterByName('cart_uid');
+    var baId    = getParameterByName('baid');
+    if (cartUid || baId){
+      var abStep = getParameterByName('ab_step');
+      var baCheckoutUrl = getParameterByName('ba_checkout_url');
+      var baChannel = getParameterByName('channel');
+      var overlayWrapper = document.createElement('div');
+      overlayWrapper.id = 'ba-overlay';
+      overlayWrapper.setAttribute('style', 'position: fixed;display: block;width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.8);z-index: 9999999999999;cursor: pointer;');
+      var overlayTextDiv = document.createElement('div');
+      overlayTextDiv.innerHTML = "Please wait... Generating cart";
+      overlayTextDiv.setAttribute('style', 'position: absolute;top: 50%;left: 50%;font-size: 22px;color: white;transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);');
+      overlayWrapper.appendChild(overlayTextDiv);
+      document.getElementsByTagName('body')[0].appendChild(overlayWrapper);
+
+      //get the cart
+      var data = {"action_type": 'generate_cart', "ab_step": + abStep,
+        "cart_uid": window.baMsg.cart_uid, "baid": baId, "channel": baChannel
+      }
+      baMet.sendRequest(window.baMsg.app_url, data, function(resp) {
+        window.location = baCheckoutUrl + "?attributes[from]=Booster%20Apps%20Abandoned%20Cart%20Notification";
+      });
+      return;
+    }
+  }
+
+  
+  
+  function boosterPushSession(){
+  var _this = this;
+  window.baLoaded = false;
+
+  this.generate = function (settings) {
+    baMsg.log('boosterPush generate');
+    function requestPushPermissions(){
+      navigator.serviceWorker.register("/apps/ba_fb_app/push?js_asset=1");
+      return new Promise(function(resolve, reject) {
+        const permissionResult = Notification.requestPermission(function(result) {
+          resolve(result);
+        });
+        if (permissionResult) {
+          permissionResult.then(resolve, reject);
+        }
+      })
+      .then(function(permissionResult) {
+        baMsg.log(permissionResult)
+
+        if (permissionResult !== 'granted') {
+          baMsg.log('Permission not granted.');
+        } else {
+          baMsg.log('Permission granted.');
+          subscribeUserToPush();
+        }
+      });
+    }
+
+    function urlB64ToUint8Array(base64String) {
+     const padding = '='.repeat((4 - base64String.length % 4) % 4);
+     const base64 = (base64String + padding)
+       .replace(/\-/g, '+')
+       .replace(/_/g, 'index.html');
+
+     const rawData = window.atob(base64);
+     const outputArray = new Uint8Array(rawData.length);
+
+     for (let i = 0; i < rawData.length; ++i) {
+       outputArray[i] = rawData.charCodeAt(i);
+     }
+     return outputArray;
+   }
+
+    function subscribeUserToPush() {
+      return navigator.serviceWorker.register("/apps/ba_fb_app/push?js_asset=1")
+      .then(function(registration) {
+        var subscribeOptions = {
+          userVisibleOnly: true,
+          applicationServerKey: urlB64ToUint8Array("BO5RJ2FA8w6MW2Qt1_MKSFtoVpVjUMLYkHb2arb7zZxEaYGTMuLvmZGabSHj8q0EwlzLWBAcAU_0z-z9Xps8kF8=")
+        };
+        baMsg.log("subscribeOptions: ", subscribeOptions);
+        return registration.pushManager.subscribe(subscribeOptions);
+      })
+      .then(function(pushSubscription) {
+        baMsg.log('PushSubscription: ', JSON.stringify(pushSubscription));
+
+        trackPushOptIn(pushSubscription.toJSON());
+      });
+    }
+
+    function trackPushOptIn(pushSubscription){
+      var params = {
+        channel: 'push',
+        endpoint: pushSubscription.endpoint,
+        keys_auth: pushSubscription.keys.auth,
+        keys_p256dh: pushSubscription.keys.p256dh,
+        user_agent: navigator.userAgent,
+        visitor_token: window.baMsg.visitor_token,
+        tz_offset: window.baMsg.browser_info.tz_offset,
+        os: window.baMsg.browser_info.os,
+        browser: window.baMsg.browser_info.browser
+      };
+
+      baMet.sendRequest(window.baMsg.app_url + "/push", params, function(data){
+        localStorage.setItem("ba_push_subscription", JSON.stringify(pushSubscription));
+        updateSubscriberHash({ba_push_opted_in: parseInt(new Date().getTime())})
+      });
+    }
+
+    if (!window.baMsg.subscriber_hash.ba_push_opted_in && !window.baMsg.subscriber_hash.ba_push_rejected){
+      setTimeout(function(){
+        requestPushPermissions();
+      }, 1000);
+    }
+  }
+  return this;
+}
+
+  (function() {
+
+      if (window.baMsg.fb_active && window.baMsg.fb_page_id){
+        //fb
+        var loader = new boosterFBLoader();
+        loader.load();
+        loader.loadChat({
+          "active":0,
+          "minimized":0,
+          "theme_color":'#0084FF',
+          "logged_in_greeting":"Hi there! How can we help you?",
+          "logged_out_greeting":"Hi! We\'re here to answer any questions you may have."
+        });
+        new boosterFbCheckboxes().generate(window.baMsg.settings.fb_base);
+        new boosterFbModal().generate(window.baMsg.settings.fb_modal);
+        new boosterFbAtcModal().generate(window.baMsg.settings.fb_atc_popup);
+      }
+      //push
+      if (window.baMsg.push_active){
+        new boosterPushSession().generate({
+          "active": true
+        });
+      }
+
+      if (window.baMsg.sms_active){
+        new boosterSMSAtcModal().generate({
+           "active":0,
+           "title":"",
+           "paragraph":"",
+           "no_thanks_text":"",
+           "close_button":"",
+           "plugin_type":"send_to_messenger",
+           "button_cta":"",
+           "button_cta_color":"",
+           "header_bg_color":"",
+           "body_bg_color":"",
+           "header_text_color":"",
+           "paragraph_text_color":"",
+           "no_thanks_text_color":"",
+           "disclaimer":""
+        });
+      }
+
+    })();
+
+  listentoAtc();
+
+  });
+}())
+</script>
+
+
+
+<script>
+  function updateHeaderCart() {
+    fetch('/get-header-cart-data/', {
+      method: 'GET',
+      headers: {
+        'X-CSRFToken': '{{ csrf_token }}',
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        console.error(data.error);
+        return;
+      }
+
+      // Update total items and total cost
+      document.querySelector('.total-pro.bigcounter').innerText = data.total_items;
+      document.querySelector('.shopping-cart__total .money').innerText = `$${data.total_cost.toFixed(2)} USD`;
+      
+      // Populate cart items
+      const cartItemsList = document.getElementById('cart-items-list');
+      cartItemsList.innerHTML = '';  // Clear current items
+
+      if (data.items.length > 0) {
+        document.querySelector('.cart-empty-title').style.display = 'none';  // Hide "cart is empty" message
+
+        data.items.forEach(item => {
+          cartItemsList.innerHTML += `
+            <div class="single-cart-box" id="cart-item-${item.id}">
+              <div class="cart-img">
+                <a href="${item.product_url}"><img src="${item.product_image}" alt="${item.product_name}"></a>
+                <span class="pro-quantity">${item.quantity}x</span>
+              </div>
+              <div class="cart-content">
+                <h6><a href="${item.product_url}">${item.product_name}</a></h6>
+                <span class="cart-price"><span class="money">$${item.price.toFixed(2)} USD</span></span>
+              </div>
+              <a class="del-icone" href="javascript:void(0);" onclick="removeFromCart(${item.id})"><i class="far fa-times"></i></a>
+            </div>`;
+        });
+      } else {
+        document.querySelector('.cart-empty-title').style.display = 'block';  // Show "cart is empty" message
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  }
+
+  // Automatically update cart when page loads or when an item is added
+  document.addEventListener('DOMContentLoaded', function() {
+    updateHeaderCart();
+  });
+</script>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.product-action-1 button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        const productId = this.closest('.single-product-wrap').id;
+
+        fetch(`/add-to-cart/${productId}/`, {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': '{{ csrf_token }}',
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.error) {
+            alert(data.error);
+          } else {
+            alert(data.message);
+            document.querySelector('#cart-total-items').innerText = data.total_items;
+            document.querySelector('#cart-total-cost').innerText = `$${data.total_cost.toFixed(2)}`;
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    });
+  });
+</script>
+
+</body>
+
+</html>
