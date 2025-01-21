@@ -42,6 +42,7 @@ urlpatterns = [
 
     path('products/', views.products_view, name='products'),
     path('filter/', views.filter_page, name='filter_page'),
+    path('api/filter/', views.filter_api, name='filter_api'),
     # path('payment/<int:order_id>/', views.payment_page, name='payment_page'),
 
 ]

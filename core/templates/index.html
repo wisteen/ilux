@@ -33,6 +33,8 @@
       <!-- Theme CSS -->
       <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}" />
 
+      {% block link %}{% endblock %}
+      {% block script %}{% endblock %}
 
       <style type="text/css">
          input[type="number"]::-webkit-inner-spin-button,
@@ -137,9 +139,9 @@
                      </div>
                   </div>
                   <div class="col-xxl-5 col-lg-5 d-none d-lg-block">
-                     <form action="#">
+                     <form method="get" action="/filter">
                         <div class="input-group">
-                           <input class="form-control rounded" type="search" placeholder="Search for products" />
+                           <input class="form-control rounded" name="search" type="search" placeholder="Search for products" />
                            <span class="input-group-append">
                               <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end" type="button">
                                  <svg
@@ -1564,8 +1566,7 @@ $(document).ready(function() {
     });
 });
 </script>
+<!-- Pass products to javascript file. -->
+   {{ stores|json_script:"stores"}}
    </body>
-
-
-
 </html>

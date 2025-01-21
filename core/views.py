@@ -3,8 +3,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from .models import Profile, CartItem, Cart
 from django.utils import timezone
-from django.db.models import Count
+from django.db.models import Avg, Q
 from django.views.decorators.http import require_http_methods
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.sites.shortcuts import get_current_site
+from django.urls import reverse
 # Create your views here.
 import json
 from django.shortcuts import render, get_object_or_404
@@ -843,16 +846,181 @@ def products_view(request):
 def filter_page(request):
     # Get the search term (if any) from the GET parameters
     search_query = request.GET.get('search', '')
-    
+
     # Get all products (or stores, if using a Store model), or filter by search query if provided
     stores = Product.objects.all()  # Change to Store if you're filtering stores
-    
+    products_data = None
+
     if search_query:
         stores = stores.filter(name__icontains=search_query)
-    
-    # Optionally, add other filters here (price, rating, etc.)
 
-    return render(request, 'pages/shop-grid.html', {'stores': stores, 'search_query': search_query})
+        if stores:
+            # Convert from queryset to list
+            products_data = []
+            for product in stores:
+                average_rating = product.average_rating()
+
+                filtered_product = {
+                    "id": product.id,
+                    "name": product.name,
+                    "price": product.discount,
+                    "average_rating": average_rating,
+                    "image": f'http://127.0.0.1:8000{product.image.url}' if product.image else None,
+                }
+
+                products_data.append(filtered_product)
+        else:
+            products_data = []
+
+    return render(request, 'pages/shop-grid.html', {'stores': products_data, 'search_query': search_query})
+
+
+def filter_api(request):
+    if request.method == "GET":
+        # Extract query parameters
+        search_query = request.GET.get('search', '')
+        ratings = request.GET.getlist('ratings', '')
+        categories = request.GET.getlist('categories', '')
+        min_price = request.GET.get('min_price', None)
+        max_price = request.GET.get('max_price', None)
+        page = request.GET.get('page')
+        page_size = request.GET.get('size')
+
+        # Validating page and page_size values
+        if page is not None:
+            try:
+                page = int(page)
+            except ValueError:
+                page = 1
+
+        if page_size is not None:
+            try:
+                page_size = int(page_size)
+            except ValueError:
+                page_size = 3
+
+        # Set default page value if none was provided.
+        if page is None:
+            page = 1
+
+        # Set default page_size value if none was provided.
+        if page_size is None:
+            page_size = 3
+
+
+        ratings_list = []
+        categories_list = []
+
+        # Get ratings list
+        if ratings != [''] and ratings is not None and ratings != '':
+            for values in ratings:
+                ratings_list = values.split(',')
+
+        # Get categories list
+        if categories != [''] and categories is not None and categories != '':
+            for values in categories:
+                categories_list = values.split(',')
+
+        # Query to get all products
+        products = Product.objects.all()
+
+        # Filter by ratings
+        if len(ratings_list) > 0:
+            query = Q()
+
+            for rating in ratings_list:
+                try:
+                    int(rating)
+                except ValueError:
+                    rating = 5
+                except TypeError:
+                    rating = 5
+
+                query |= Q(avg_rating__gte=rating, avg_rating__lt=int(rating) + 1)
+
+            products = (
+                products.annotate(avg_rating=Avg('ratings__rating')).filter(query)
+            )
+
+        # Filter by categories
+        if len(categories_list) > 0:
+            # Get the id of each category in the list and add them to a new list.
+            categories_obj_list = [Category.objects.get(name=category) for category in categories_list]
+            products = products.filter(category__in=categories_obj_list)
+
+        # Filter by minimum and maximum price
+        if min_price is not None and max_price is not None:
+            products = products.filter(new_price__range=(min_price, max_price))
+        elif min_price is None and max_price is not None:
+            products = products.filter(new_price__lte=max_price)
+        elif min_price is not None and max_price is None:
+            products = products.filter(price__gte=min_price)
+
+        if search_query:
+            products = products.filter(category__name__icontains=search_query)
+
+        # Pagination
+        paginator = Paginator(products, per_page=page_size, orphans=0)
+        try:
+            paginated_data = paginator.page(page)
+            total_pages = paginator.num_pages
+        except EmptyPage:
+            return JsonResponse({"error": 'Page not found.'}, status=404)
+        except PageNotAnInteger:
+            return JsonResponse({"error": 'Page number must be an integer.'}, status=400)
+        
+        # Convert from queryset to serializable data
+        products_data = []
+
+        for product in paginated_data:
+            average_rating = product.average_rating()
+
+            filtered_product = {
+                "id": product.id,
+                "name": product.name,
+                "discount": product.discount,
+                "price": product.new_price,
+                "average_rating": average_rating,
+                "image": f'http://127.0.0.1:8000{product.image.url}' if product.image else None,
+            }
+
+            products_data.append(filtered_product)
+
+        # Get next and previous pages url.
+        if page == 1 and page == total_pages:
+            previous_page = None
+            next_page = None
+        elif page == 1 and page < total_pages:
+            previous_page = None
+            next_page = f"https://{get_current_site(request).domain}"\
+                        f"{reverse('filter_api')}?page={page + 1}&size={page_size}"
+        if page > 1 and page < total_pages:
+            previous_page = f"https://{get_current_site(request).domain}"\
+                            f"{reverse('filter_api')}?page={page - 1}"\
+                            f"&size={page_size}"
+            next_page = f"https://{get_current_site(request).domain}"\
+                        f"{reverse('filter_api')}?page={page + 1}&size={page_size}"
+        if page > 1 and page == total_pages:
+            previous_page = f"https://{get_current_site(request).domain}"\
+                            f"{reverse('filter_api')}?page={page - 1}"\
+                            f"&size={page_size}"
+            next_page = None
+
+        # Response data
+        data = {
+            'total_number_of_products': len(products),
+            'total_pages': total_pages,
+            'previous_page': previous_page,
+            'current_page': page,
+            'next_page': next_page,
+            'products': products_data
+        }
+
+        # Return the filtered results
+        return JsonResponse({"products": data}, status=200)
+
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
 
 
 
