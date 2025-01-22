@@ -1,0 +1,19 @@
+.card-category {
+    font-size: 12px;
+}
+
+.card-product-title,
+.card-price {
+    color: black;
+}
+
+.card-button {
+    background-color:#0aad0a;
+    border: 1px solid #0aad0a;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.card-button:hover {
+    background-color: #088a08;;
+}

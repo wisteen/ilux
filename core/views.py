@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from .models import Profile, CartItem, Cart
 from django.utils import timezone
-from django.db.models import Avg, Q
+from django.db.models import Count, Avg, Q
 from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.sites.shortcuts import get_current_site
@@ -922,7 +922,7 @@ def filter_api(request):
                 categories_list = values.split(',')
 
         # Query to get all products
-        products = Product.objects.all()
+        products = Product.objects.all().order_by('-created_at')
 
         # Filter by ratings
         if len(ratings_list) > 0:
@@ -968,19 +968,23 @@ def filter_api(request):
             return JsonResponse({"error": 'Page not found.'}, status=404)
         except PageNotAnInteger:
             return JsonResponse({"error": 'Page number must be an integer.'}, status=400)
-        
+
         # Convert from queryset to serializable data
         products_data = []
 
         for product in paginated_data:
             average_rating = product.average_rating()
+            reviews_count = product.reviews.all().count()
 
             filtered_product = {
                 "id": product.id,
                 "name": product.name,
-                "discount": product.discount,
-                "price": product.new_price,
+                "discount": round(product.discount, 2),
+                "price": round(product.new_price, 2),
+                "old_price": round(product.old_price, 2),
                 "average_rating": average_rating,
+                "category": product.category.name,
+                "reviews_count": reviews_count,
                 "image": f'http://127.0.0.1:8000{product.image.url}' if product.image else None,
             }
 

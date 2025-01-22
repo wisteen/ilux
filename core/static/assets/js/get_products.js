@@ -334,18 +334,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getProductCard(product) {
         const productCard = `
-            <div class="col-xs-12 col-md-3 mb-4"> <!-- Adjust column size (col-md-4 for 3 cards per row) -->
+            <div class="col-12 col-sm-6 col-md-3 mb-4"> <!-- Adjust column size (col-md-4 for 3 cards per row) -->
                 <div class="card">
                     <img src="${product.image}" class="card-img-top" alt="${product.name}">
                     <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <div>
+                        <div class=card-category>${product.category}</div>
+                        <div class="mb-1"><span class="card-title fs-6 card-product-title">${product.name}</span></div>
+                        <div class="mb-2">
                             <small class="text-warning">
                                 ${generateStars(product.average_rating)}
                             </small>
-                            <span class="text-muted small ms-2">${product.average_rating}</span>
+                            <span class="text-muted small ms-1">${product.average_rating} (${product.reviews_count})</span>
                         </div>
-                        <p class="card-text">Price: $${product.price}</p>
+                        <div
+                            class="card-text d-flex justify-content-between
+                                justify-content-md-start flex-md-column"
+                        >
+                            <div class="d-flex justify-content-md-between mb-3">
+                                <span class="card-price d-inline-block d-md-inline me-1">$${product.price}</span>
+                                <span><del>$${product.old_price ? product.old_price : ''}</del></span>
+                            </div>
+                            <button class="text-white card-button">+ Add</button>
+                        </div>
                     </div>
                 </div>
             </div>
