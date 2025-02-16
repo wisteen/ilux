@@ -454,3 +454,20 @@ class KeyFigure(models.Model):
 
     def __str__(self):
         return f"{self.label}: {self.value}"
+
+
+class PageContent(models.Model):
+    PAGE_TYPE_CHOICES = [
+        ('Become a Drop Shipper', 'Become a Drop Shipper'),
+        ('Promo & Deals', 'Promo & Deals'),
+        ('Get to know Us', 'Get to know Us'),
+        ('For Consumers', 'For Consumers'),
+    ]
+    page_type = models.CharField(max_length=255, choices=PAGE_TYPE_CHOICES)
+    title = models.CharField(max_length=255)
+    content = RichTextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.get_page_type_display()} - {self.title}"

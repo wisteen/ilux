@@ -1,6 +1,10 @@
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+import dj_database_url
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,9 +32,9 @@ from django.contrib.messages import constants as message_constants
 SECRET_KEY = 'django-insecure-ip@aqmq1!*h+i8)b^v2!t$g=3@ia19^2@gwvc5%0aepvwj*j65'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["eduprofiler.com", "5.135.141.158", "127.0.0.1"]
+ALLOWED_HOSTS = ["ilux.onrender.com", "5.135.141.158", "127.0.0.1"]
 
 # Application definition
 
@@ -51,7 +55,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
-    'account',
+    # 'account',
     # 'drf_yasg',
     'core',
     'webdata',
@@ -62,6 +66,11 @@ INSTALLED_APPS = [
     "dal",
     "dal_select2",
     # "simple_deploy",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+     'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +81,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -87,8 +97,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'core.context_processors.page_categories',
-
+                'core.context_processors.global_site_data',
+                
             ],
         },
     },
@@ -110,15 +120,10 @@ if DEBUG:
 else:
     # Production database settings
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'tnnqdvdx_x',
-            'USER': 'tnnqdvdx_y',
-            'PASSWORD': 'p-)QvL#s7QDCJ;r',
-            'HOST': env('DB_HOST', default='localhost'),
-            'PORT': env('DB_PORT', default='3306'),
-        }
-    }
+    'default': dj_database_url.config(
+        default='postgresql://wisteen:GMdnfKlSup5xohoBBrTxy22sJbPFBK75@dpg-cuoviiogph6c73dqsbq0-a.oregon-postgres.render.com/ilux_db'
+    )
+}
 
 
 # Password validation
@@ -168,13 +173,13 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "Library Admin",
+    "site_title": "iHomeLuxury",
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Library",
+    "site_header": "iHomeLuxury",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_brand": "Library",
+    "site_brand": "iHomeLuxury",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "books/img/logo.png",
@@ -329,3 +334,33 @@ CKEDITOR_CONFIGS = {
 FLUTTERWAVE_PUBLIC_KEY = 'your-public-key'
 FLUTTERWAVE_SECRET_KEY = 'your-secret-key'
 FLUTTERWAVE_ENCRYPTION_KEY = 'your-encryption-key'
+
+
+LOGIN_REDIRECT_URL = '/'  # Default redirect after login
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+ACCOUNT_SIGNUP_REDIRECT_URL = '/' # Redirect new users to email verification page
+# ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL='/dashboard/'
+# ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL='/dashboard/'
+SOCIALACCOUNT_LOGIN_ON_GET = True  # Auto-login for social accounts
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "optional" # Enforce email verification for regular signup
+# SOCIALACCOUNT_EMAIL_VERIFICATION = "none"  # Skip verification for social accounts
+ACCOUNT_LOGIN_ON_SIGNUP = False
+
+# google allauth setup
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+)
+
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': os.getenv('CLIENT_ID'),
+            'secret': os.getenv('CLIENT_SECRET')
+        }
+    }
+}

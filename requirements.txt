@@ -6,6 +6,8 @@ certifi==2024.12.14
 charset-normalizer==3.4.1
 colorama==0.4.6
 crispy-bootstrap5==2024.2
+django-allauth==0.52.0
+python-dotenv==1.0.1
 Django==4.2
 django-adminlte3==0.1.6
 django-appointment==3.7.4
@@ -39,7 +41,7 @@ inflection==0.5.1
 packaging==24.1
 phonenumbers==8.13.42
 pillow==10.4.0
-psycopg2==2.9.9
+# psycopg2==2.9.9
 python-dateutil==2.9.0.post0
 python-http-client==3.3.7
 pytz==2024.2

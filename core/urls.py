@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as form_validation
 from . import views
-from account.views import register_user
+# from account.views import register_user
 
 urlpatterns = [
     path('', views.homepage, name='home'),
@@ -33,18 +33,24 @@ urlpatterns = [
 
     path('order-success/<int:order_id>/', views.order_success_view, name='order_success'),
     path('order/<int:order_id>/payment/', views.make_payment, name='make_payment'),
+    path('accout-orders/', views.account_orders, name='account_orders'),
+
     path('payment/callback/<int:order_id>/', views.payment_callback, name='payment_callback'),
 
     path('contact-us/', views.contact_us, name='contact_us'),
     path('about-us/', views.about_us, name='about_us'),
     path('category/<slug:slug>/', views.category_detail_view, name='category_detail'),
-    path('register/', register_user, name='register_user'),
+    # path('register/', register_user, name='register_user'),
 
     path('products/', views.products_view, name='products'),
     path('filter/', views.filter_page, name='filter_page'),
     path('api/filter/', views.filter_api, name='filter_api'),
     # path('payment/<int:order_id>/', views.payment_page, name='payment_page'),
 
+    path('accounts/', include('allauth.urls')),
+
+    path('page/<str:page_type>/', views.page_view, name='page_view'),
+    
 ]
 
 

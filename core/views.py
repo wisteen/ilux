@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
-from .models import Profile, CartItem, Cart
+from .models import Profile, CartItem, Cart, PageContent
 from django.utils import timezone
 from django.db.models import Count, Avg, Q
 from django.views.decorators.http import require_http_methods
@@ -54,8 +54,16 @@ def homepage(request):
         wishlist_obj, _ = Wishlist.objects.get_or_create(user=request.user)
         wishlist = wishlist_obj.products.values_list('id', flat=True)
 
+    pages = {
+        "Get to know Us": PageContent.objects.filter(page_type="Get to know Us"),
+        "For Consumers": PageContent.objects.filter(page_type="For Consumers"),
+        "Become a Drop Shipper": PageContent.objects.filter(page_type="Become a Drop Shipper"),
+        "Promo & Deals": PageContent.objects.filter(page_type="Promo & Deals"),
+    }
+
     context = {
         'categories': categories,
+        'page_category': pages,
         'products': products,
         'promotions': promotions,
         'trending_categories': trending_categories,
@@ -1025,8 +1033,25 @@ def filter_api(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
+def page_view(request, page_type):
+    # Get all content of the specified type
+    content_list = PageContent.objects.filter(page_type=page_type).order_by('created_at')
+
+    # Set up pagination (e.g., 5 items per page)
+    paginator = Paginator(content_list, 5) 
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    # Render the appropriate template
+    return render(request, 'page_view.html', {
+        'page_type': page_type,
+        'page_obj': page_obj,
+    })
 
 
+def account_orders(request):
+    orders = request.user.orders.all().order_by('-created_at')
+    return render(request, 'pages/account-orders.html',  {'orders': orders})
 
 def error_400_view(request, exception):
     return render(request, 'home/400.html', status=400)

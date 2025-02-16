@@ -1,0 +1,24 @@
+<li class="list-unstyled socialaccount-li position-relative">
+    <a title="{{ attrs.name }}" href="{{ attrs.href }}">
+        <button
+            class="w-100 rounded-3 bg-white d-flex align-items-center
+                justify-content-center text-primary py-0 fs-5 socialaccount-btn"
+            >
+            {% if attrs.name == 'Google' %}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="#F9B808"
+                    class="icon-g"
+                >
+                    <text x="2" y="18" font-size="18px" font-family="Arial" font-weight="bold">
+                    G
+                    </text>
+                </svg>
+            {% endif %}
+            {{ attrs.name }}
+        </button>
+    </a>
+</li>

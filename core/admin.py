@@ -1,9 +1,14 @@
 from django.contrib import admin
 from .models import (
     Profile, Category, Product, ProductImage, Color, Size, Wishlist, Compare, Schedule, TimeSlot,
-    Promotion, Cart, CartItem, Rating, ContactInquiry, AboutUs, Leadership, KeyFigure
+    Promotion, Cart, CartItem, Rating, ContactInquiry, AboutUs, Leadership, KeyFigure, PageContent
 )
 
+@admin.register(PageContent)
+class PageContentAdmin(admin.ModelAdmin):
+    list_display = ('page_type', 'title', 'created_at', 'updated_at')
+    list_filter = ('page_type',)
+    search_fields = ('title', 'content')
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):

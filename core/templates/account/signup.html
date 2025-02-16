@@ -1,0 +1,63 @@
+{% extends "../index.html" %}
+{% load allauth i18n %}
+{% load static %}
+{% load humanize %}
+
+{% block extra_head %}
+  <!-- Additional custom styles for Allauth pages -->
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <style>
+    /* Example inline styles; move to your CSS file as needed */
+    .hero-section {
+      background: #f7f7f7;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-section p {
+      font-size: 1.25rem;
+      color: #555;
+    }
+    .auth-card {
+      margin-top: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border: none;
+      border-radius: 0.5rem;
+    }
+    .auth-card .card-body {
+      padding: 2rem;
+    }
+    .auth-card button {
+      font-size: 1.125rem;
+      padding: 0.75rem;
+    }
+  </style>
+{% endblock extra_head %}
+
+{% block head_title %}
+  {% trans "Sign up" %}
+{% endblock head_title %}
+
+{% block hero %}
+
+{% endblock hero %}
+
+{% block body %}
+  <div class="container my-5">
+    <div class="hero-section text-center">
+        <h1>{% trans "Join now" %}</h1>
+        <p>{% trans "Countinue shopping by clicking the link below" %}</p>
+      </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        {% if SOCIALACCOUNT_ENABLED %}
+          {# If social account login is enabled, include its snippet #}
+          {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock body %}
