@@ -32,7 +32,7 @@ from django.contrib.messages import constants as message_constants
 SECRET_KEY = 'django-insecure-ip@aqmq1!*h+i8)b^v2!t$g=3@ia19^2@gwvc5%0aepvwj*j65'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["ilux.onrender.com", "5.135.141.158", "127.0.0.1"]
 
@@ -109,20 +109,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 
-if DEBUG:
-    # Development database settings
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    # Production database settings
-    DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://wisteen:GMdnfKlSup5xohoBBrTxy22sJbPFBK75@dpg-cuoviiogph6c73dqsbq0-a.oregon-postgres.render.com/ilux_db'
-    )
+
+
+DATABASES = {
+'default': dj_database_url.config(
+    default='postgresql://wisteen:GMdnfKlSup5xohoBBrTxy22sJbPFBK75@dpg-cuoviiogph6c73dqsbq0-a.oregon-postgres.render.com/ilux_db'
+)
 }
 
 
